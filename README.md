@@ -12,8 +12,8 @@ I love to read books and listen to music.
 
 - 🌱 I’m currently learning Laravel. 
 - 👯 I’m currently open for work and employment opportunities (remote)
-- 💬 Ask me about PHP, Laravel, Testing and API development.
-- 📫 I am just one mail away - [paul at paulbooker dot co dot uk]
+- 💬 Ask me about PHP, Laravel, PHPUnit Testing and API development.
+- 📫 You can send me an email at - [paul at paulbooker dot co dot uk]
 
 
 
