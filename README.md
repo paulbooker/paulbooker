@@ -6,7 +6,7 @@
 ![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white)
 ![Mac OS](https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white)
 
-Backend PHP (Laravel) Developer & Linux / DNS Administrator. Background in Theoretical Physics. **Available for work**. 
+Backend PHP (Laravel) Developer & Linux Administrator. Background in Theoretical Physics. **Available for work**. 
 
 I love to read books and listen to music.
 
