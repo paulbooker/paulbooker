@@ -1,4 +1,4 @@
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
+<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hello there! Nice to see you.</h1>
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white)
@@ -10,10 +10,8 @@ Backend PHP (Laravel) Developer & Linux Administrator. Background in Theoretical
 
 I love to read books and listen to music.
 
-- 🔭 I’m currently working on a Job Board using Laravel.
-- 🌱 I’m currently learning Laravel. 
+- 🌱 I’m currently learning Laravel and improving my knowledge of PHP / OOP. 
 - 👯 I’m currently open for work and employment opportunities (remote)
-- 💬 Ask me about PHP, Laravel, Testing and API development.
 - 📫 I am just one mail away - [paul at paulbooker dot co dot uk]
 - ⚡ Fun fact: I used to be the Drupal developer for the Mozilla spreadfirefox.com website!
 
