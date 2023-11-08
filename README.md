@@ -8,7 +8,7 @@
 
 Backend PHP (Laravel) Developer & Linux Administrator. Background in Theoretical Physics. **Available for work**. 
 
-- 🌱 I’m currently learning Laravel and improving my knowledge of PHP / OOP. 
+- 🌱 I’m currently learning Symfony / Drupal 10 and improving my knowledge of PHP / OOP. 
 - 👯 I’m currently open for work and employment opportunities (remote)
 - 📫 I am just one mail away - [paul at paulbooker dot co dot uk]
 - ⚡ Fun fact: I used to be the Drupal developer for the Mozilla spreadfirefox.com website!
