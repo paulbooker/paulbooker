@@ -6,9 +6,9 @@
 ![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white)
 ![Mac OS](https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white)
 
-Backend PHP (Laravel) Developer & Linux Administrator. Background in Theoretical Physics & Pure Mathematics. **Available for work**. 
+Backend PHP Developer & Linux Administrator. Background in Theoretical Physics & Pure Mathematics. **Available for work**. 
 
-- 🌱 I’m currently learning Symfony and improving my knowledge of PHP / OOP. 
+- 🌱 I’m currently learning Drupal 10 / Symfony and improving my knowledge of PHP 7/8. 
 - 👯 I’m currently open for work and employment opportunities (remote or local)
 - 📫 Feel free to send me an email - [paul at paulbooker dot co dot uk]
 - ⚡ Fun fact: I used to be the lead Drupal Developer & Site Administrator for the Mozilla spreadfirefox.com community website!
