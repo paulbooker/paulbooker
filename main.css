@@ -1,0 +1,24 @@
+body {
+ 	font-family: 'Gotu', sans-serif; font-size: 50px; margin:60px;
+}
+.work {
+	border-radius: 20px;
+	border-style: dashed;	
+}
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+	body {
+     		color: #eee;
+               	background: #121212;
+       	}  
+        a {
+        	color: #809fff;
+        }
+	.blockquote-1, .work {
+		color: #03DAC6
+	}
+}
+
+@media (prefers-color-scheme: light) {
+  /* Light theme styles go here */
+}
