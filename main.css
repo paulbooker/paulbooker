@@ -1,16 +1,6 @@
 body {
  	font-family: 'Gotu', sans-serif; font-size: 50px; margin:60px;
 }
-iframe {
-    display: block;
-    border-style:none;
-}
-p, iframe {
-    width: 100px;
-    height: 50px;
-    margin: 0 auto;
-    background-color: #777;
-}
 .work {
 	border-radius: 20px;
 	border-style: dashed;	
