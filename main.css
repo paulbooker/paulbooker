@@ -14,8 +14,11 @@ body {
         a {
         	color: #809fff;
         }
-	.blockquote-1, .work {
+	.work {
 		color: #03DAC6
+	}
+	.referrals {
+		color: #FF073A
 	}
 }
 
