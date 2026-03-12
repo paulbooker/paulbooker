@@ -2,7 +2,9 @@ body {
 	font-family: "Mozilla Headline", sans-serif; font-size: 50px; margin:80px; /* font-family: 'Gotu', sans-serif;  */
   color: #eee;
   background: #121212;
- 	a color: #C0C0C0;
+ 	a { 
+ 		color: #C0C0C0;
+ 	}
 	.work, .referrals {
 	border-radius: 20px;
 	border-style: dashed;	
