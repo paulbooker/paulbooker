@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SO(10) Bilinear Transformation Derivation</title>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    .mathblock {
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Why the Last Expression Transforms as Indicated</h1>
+  <p>
+    Let
+    \[
+      S(\omega) \equiv e^{\frac{i}{4}\omega_{ij}\sigma_{ij}},
+      \qquad
+      \Gamma_{ijk} \equiv \gamma_i\gamma_j\gamma_k.
+    \]
+    Then the right-handed spinor transforms as
+    \[
+      \psi_R \to S\,\psi_R,
+    \]
+    so its transpose transforms as
+    \[
+      \psi_R^T \to \psi_R^T S^T.
+    \]
+  </p>
+
+  <p>
+    Start from the bilinear
+    \[
+      B \equiv \psi_R^T\,C\,\Gamma_{ijk}\,\psi_R.
+    \]
+    Under an \(SO(10)\) transformation,
+    \[
+      B \to B' = \psi_R^T S^T\, C\, \Gamma_{ijk}\, S\psi_R.
+    \]
+    So the main task is to simplify the factor \(S^T C\).
+  </p>
+
+  <h2>The key identity</h2>
+  <p>
+    The charge-conjugation matrix satisfies
+    \[
+      C^{-1}\gamma_i^T C = -\gamma_i.
+    \]
+    From this one obtains
+    \[
+      C^{-1}\sigma_{ij}^T C = -\sigma_{ij},
+    \]
+    because
+    \[
+      \sigma_{ij}=\frac{i}{2}[\gamma_i,\gamma_j].
+    \]
+  </p>
+
+  <p>
+    Indeed,
+    \[
+    \begin{aligned}
+      C^{-1}\sigma_{ij}^T C
+      &= \frac{i}{2}C^{-1}[\gamma_i,\gamma_j]^T C \\
+      &= \frac{i}{2}C^{-1}[\gamma_j^T,\gamma_i^T]C \\
+      &= \frac{i}{2}[C^{-1}\gamma_j^T C,\, C^{-1}\gamma_i^T C] \\
+      &= \frac{i}{2}[-\gamma_j,\, -\gamma_i] \\
+      &= \frac{i}{2}[\gamma_j,\gamma_i] \\
+      &= -\sigma_{ij}.
+    \end{aligned}
+    \]
+  </p>
+
+  <p>
+    Exponentiating this relation gives
+    \[
+      C^{-1}S^T C
+      = C^{-1} e^{\frac{i}{4}\omega_{ij}\sigma_{ij}^T} C
+      = e^{\frac{i}{4}\omega_{ij}(C^{-1}\sigma_{ij}^T C)}
+      = e^{-\frac{i}{4}\omega_{ij}\sigma_{ij}}
+      = S^{-1}.
+    \]
+    Equivalently,
+    \[
+      S^T C = C S^{-1}.
+    \]
+  </p>
+
+  <h2>Apply this to the bilinear</h2>
+  <p>
+    Therefore,
+    \[
+    \begin{aligned}
+      B'
+      &= \psi_R^T S^T C \Gamma_{ijk} S \psi_R \\
+      &= \psi_R^T C S^{-1}\Gamma_{ijk}S \psi_R.
+    \end{aligned}
+    \]
+  </p>
+
+  <p>
+    Now use \(\psi_R=P_+\psi\), together with \(P_+^T=P_+\). Then
+    \[
+      \psi_R^T = \psi^T P_+,
+    \]
+    and so
+    \[
+      B' = \psi^T P_+\, C\, \bigl(S^{-1}\Gamma_{ijk}S\bigr)\, P_+\psi.
+    \]
+  </p>
+
+  <div class="box">
+    <p>
+      Hence
+      \[
+        \boxed{
+        \psi_R^T C \gamma_i\gamma_j\gamma_k \psi_R
+        \;\to\;
+        \psi^T P_+\, C
+        \left\{
+        e^{-\frac{i}{4}\omega\sigma}
+        (\gamma_i\gamma_j\gamma_k)
+        e^{\frac{i}{4}\omega\sigma}
+        \right\}
+        P_+\psi
+        }
+      \]
+      which is the transformation law used in the text.
+    </p>
+  </div>
+
+  <h2>Interpretation</h2>
+  <p>
+    The important point is that the gamma-product transforms by the adjoint action
+    \[
+      \Gamma_{ijk} \to S^{-1}\Gamma_{ijk}S.
+    \]
+    Since
+    \[
+      S^{-1}\gamma_i S = R_{ii'}\gamma_{i'},
+    \]
+    it follows that
+    \[
+      S^{-1}(\gamma_i\gamma_j\gamma_k)S
+      = R_{ii'}R_{jj'}R_{kk'}\gamma_{i'}\gamma_{j'}\gamma_{k'}.
+    \]
+    So this object transforms as a rank-3 antisymmetric tensor of \(SO(10)\).
+    That is why it corresponds to the \(120\)-dimensional representation.
+  </p>
+</body>
+</html>
