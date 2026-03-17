@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hello there, my name is Paul Booker. Thank you for visiting my website.</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://www.paulbooker.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Why S⁺ and S⁻ Are Conjugates of Each Other</title>
+
+</head>
+<body>
+  <h1>Why <em>S</em><sup>+</sup> and <em>S</em><sup>−</sup> Are Conjugates of Each Other</h1>
+
+  <p>
+    Yes—this is a subtle but really important point about spinor representations of
+    <em>SO</em>(2<em>n</em>). Let’s go through the logic in a clean, conceptual way.
+  </p>
+
+  <h2>1. What does “complex conjugate representation” mean?</h2>
+  <p>
+    A representation <em>R</em> is <em>complex conjugate</em> to <em>R</em>′ if there exists a matrix
+    <em>C</em> such that
+  </p>
+  <div class="math">
+    C<sup>−1</sup> R<sup>*</sup>(g) C = R′(g)
+  </div>
+  <p>
+    for all group elements <em>g</em>.
+  </p>
+  <p>
+    So here, we want to understand how the complex conjugate of the spinor representation behaves.
+  </p>
+
+  <h2>2. Start from how spinors transform</h2>
+  <p>You have:</p>
+  <div class="math">
+    ψ → exp[(i/4) ω<sub>ij</sub> σ<sub>ij</sub>] P<sub>±</sub> ψ
+  </div>
+  <p>So the representation matrices are:</p>
+  <div class="math">
+    R<sub>±</sub> = exp[(i/4) ω<sub>ij</sub> σ<sub>ij</sub>] P<sub>±</sub>
+  </div>
+
+  <h2>3. Take the complex conjugate</h2>
+  <p>Complex conjugation gives:</p>
+  <div class="math">
+    R<sub>±</sub><sup>*</sup> = exp[−(i/4) ω<sub>ij</sub> σ<sub>ij</sub><sup>*</sup>] P<sub>±</sub><sup>*</sup>
+  </div>
+  <p>
+    Now we want to relate this back to the original form using the charge conjugation matrix <em>C</em>.
+  </p>
+
+  <h2>4. Use the key identities</h2>
+  <p>From the equations shown:</p>
+  <p><strong>(i) For the generators:</strong></p>
+  <div class="math">
+    C<sup>−1</sup> σ<sub>ij</sub><sup>*</sup> C = −σ<sub>ij</sub>
+  </div>
+
+  <p><strong>(ii) For chirality:</strong></p>
+  <div class="math">
+    C<sub>n</sub><sup>−1</sup> γ<sub>F</sub> C<sub>n</sub> = (−1)<sup>n</sup> γ<sub>F</sub>
+  </div>
+
+  <h2>5. What happens to the projector?</h2>
+  <p>The chiral projectors are:</p>
+  <div class="math">
+    P<sub>±</sub> = 1/2 (1 ± γ<sub>F</sub>)
+  </div>
+  <p>Taking complex conjugation and conjugating by <em>C</em>:</p>
+  <div class="math">
+    C<sup>−1</sup> P<sub>±</sub><sup>*</sup> C = 1/2 (1 ± (−1)<sup>n</sup> γ<sub>F</sub>)
+  </div>
+
+  <p>So:</p>
+  <ul>
+    <li>If <em>n</em> is <strong>even</strong>, then (−1)<sup>n</sup> = +1, so P<sub>±</sub> → P<sub>±</sub>.</li>
+    <li>If <em>n</em> is <strong>odd</strong>, then (−1)<sup>n</sup> = −1, so P<sub>±</sub> → P<sub>∓</sub>.</li>
+  </ul>
+
+  <h2>6. Put it all together</h2>
+  <p>Now apply C<sup>−1</sup>(·)C to the full representation:</p>
+  <div class="math">
+    C<sup>−1</sup> R<sub>±</sub><sup>*</sup> C = exp[(i/4) ω<sub>ij</sub> σ<sub>ij</sub>] × (transformed projector)
+  </div>
+
+  <p><strong>For even <em>n</em>:</strong></p>
+  <div class="math">
+    C<sup>−1</sup> R<sub>±</sub><sup>*</sup> C = R<sub>±</sub>
+  </div>
+  <p>Each representation is equivalent to its own complex conjugate.</p>
+
+  <p><strong>For odd <em>n</em>:</strong></p>
+  <div class="math">
+    C<sup>−1</sup> R<sub>±</sub><sup>*</sup> C = R<sub>∓</sub>
+  </div>
+  <p>The complex conjugate of <em>S</em><sup>+</sup> is <em>S</em><sup>−</sup>, and vice versa.</p>
+
+  <h2>7. Final interpretation</h2>
+  <p>
+    The only difference between <em>S</em><sup>+</sup> and <em>S</em><sup>−</sup> is the chirality projector.
+    Complex conjugation flips chirality when <em>n</em> is odd, but not when <em>n</em> is even.
+  </p>
+
+  <div class="note">
+    <strong>Conclusion.</strong><br />
+    If <em>n</em> is even, then (S<sup>±</sup>)<sup>*</sup> ≅ S<sup>±</sup>.<br />
+    If <em>n</em> is odd, then (S<sup>+</sup>)<sup>*</sup> ≅ S<sup>−</sup> and (S<sup>−</sup>)<sup>*</sup> ≅ S<sup>+</sup>.
+  </div>
+
+  <h2>8. Intuition</h2>
+  <p>
+    The whole effect comes from the sign in
+  </p>
+  <div class="math">
+    C<sup>−1</sup> γ<sub>F</sub> C = (−1)<sup>n</sup> γ<sub>F</sub>
+  </div>
+  <p>
+    This determines whether chirality is preserved or flipped under conjugation.
+    Since S<sup>±</sup> are defined by chirality, that is exactly what determines whether they map to themselves or to each other.
+  </p>
+</body>
+</html>
