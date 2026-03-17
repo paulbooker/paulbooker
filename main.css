@@ -17,6 +17,7 @@ body {
 	}
 
 	.math {
+		border-style: solid;
     padding: 10px 14px;
     border-left: 4px solid #ccc;
     overflow-x: auto;
