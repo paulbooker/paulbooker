@@ -15,4 +15,26 @@ body {
 	.referrals {
 		color: #FF073A;
 	}
+
+	.math {
+    font-family: "Times New Roman", Georgia, serif;
+    background: #f7f7f7;
+    padding: 10px 14px;
+    border-left: 4px solid #ccc;
+    overflow-x: auto;
+  }
+  .note {
+    background: #faf7e6;
+    border-left: 4px solid #d9c36a;
+    padding: 12px 14px;
+    margin: 1em 0;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  code {
+    background: #f2f2f2;
+    padding: 0.1em 0.3em;
+    border-radius: 4px;
+  }
 }
