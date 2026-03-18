@@ -160,6 +160,135 @@
     So this object transforms as a rank-3 antisymmetric tensor of \(SO(10)\).
     It corresponds to the \(120\)-dimensional representation.
   </p>
+
+  </hr>
+
+  <p>
+    Let
+    \[
+    T_{ijk}=\psi^T C\,\gamma_i\gamma_j\gamma_k\,\psi .
+    \]
+    From the earlier argument, this transforms as a rank-3 \(SO(10)\) tensor. The question is why,
+    for representation-theory purposes, we may replace it by a totally antisymmetric tensor.
+  </p>
+
+  <p>
+    The key point is that the Clifford algebra lets us decompose any product of gamma matrices into a
+    totally antisymmetric part plus terms with fewer free indices.
+  </p>
+
+  <p>
+    Start from
+    \[
+    \{\gamma_i,\gamma_j\}=2\delta_{ij}.
+    \]
+    Therefore,
+    \[
+    \gamma_i\gamma_j
+    =\tfrac12\{\gamma_i,\gamma_j\}+\tfrac12[\gamma_i,\gamma_j]
+    =\delta_{ij}\mathbf 1+\tfrac12[\gamma_i,\gamma_j].
+    \]
+    If we define
+    \[
+    \sigma_{ij}=\frac{1}{2i}[\gamma_i,\gamma_j],
+    \]
+    then equivalently
+    \[
+    \gamma_i\gamma_j=\delta_{ij}\mathbf 1+i\sigma_{ij}.
+    \]
+  </p>
+
+  <p>
+    Now multiply by \(\gamma_k\):
+    \[
+    \gamma_i\gamma_j\gamma_k
+    =\delta_{ij}\gamma_k+\tfrac12[\gamma_i,\gamma_j]\gamma_k.
+    \]
+    When inserted into \(T_{ijk}\), the first term gives
+    \[
+    \delta_{ij}\,\psi^T C\gamma_k\psi,
+    \]
+    which is not an independent irreducible rank-3 object. It is simply the metric \(\delta_{ij}\)
+    multiplying the vector
+    \[
+    T_k^{(1)}=\psi^T C\gamma_k\psi.
+    \]
+    So this part belongs to a lower-rank sector.
+  </p>
+
+  <p>
+    To isolate the genuine 3-index content, fully antisymmetrize. A standard identity is
+    \[
+    \gamma_i\gamma_j\gamma_k
+    =
+    \gamma_{[i}\gamma_j\gamma_{k]}
+    +\delta_{ij}\gamma_k-\delta_{ik}\gamma_j+\delta_{jk}\gamma_i,
+    \]
+    where
+    \[
+    \gamma_{[i}\gamma_j\gamma_{k]}
+    \equiv
+    \frac{1}{3!}\sum_{\pi\in S_3}\operatorname{sgn}(\pi)
+    \,\gamma_{\pi(i)}\gamma_{\pi(j)}\gamma_{\pi(k)}.
+    \]
+  </p>
+
+  <p>
+    This identity follows by repeatedly using
+    \[
+    \gamma_a\gamma_b=-\gamma_b\gamma_a+2\delta_{ab}.
+    \]
+    Every time two gamma matrices are interchanged, one gets the antisymmetric sign together with a
+    \(\delta\)-term. After full antisymmetrization, the leftover non-antisymmetric terms are always
+    expressible as one \(\delta\) times a single gamma matrix.
+  </p>
+
+  <p>
+    Hence
+    \[
+    T_{ijk}
+    =
+    \psi^T C\,\gamma_{[i}\gamma_j\gamma_{k]}\psi
+    +\delta_{ij}\,\psi^T C\gamma_k\psi
+    -\delta_{ik}\,\psi^T C\gamma_j\psi
+    +\delta_{jk}\,\psi^T C\gamma_i\psi.
+    \]
+  </p>
+
+  <p>
+    So the rank-3 tensor decomposes into:
+  </p>
+
+  <ul>
+    <li>a totally antisymmetric rank-3 tensor, and</li>
+    <li>trace pieces built from \(\delta\) times a rank-1 tensor.</li>
+  </ul>
+
+  <p>
+    This is why we may “take \(T_{ijk}\) to be totally antisymmetric”: the non-antisymmetric part does
+    not contain a new independent 3-index structure. It reduces to lower-rank tensors that can be handled
+    separately.
+  </p>
+
+  <p>
+    In representation-theory language,
+    \[
+    (\text{rank-3 tensor from }\gamma_i\gamma_j\gamma_k)
+    \longrightarrow
+    (\text{3-form})\oplus(\text{vector trace pieces}).
+    \]
+    So once the vector part is dealt with separately, the genuinely new rank-3 content is just the totally
+    antisymmetric piece.
+  </p>
+
+  <p>
+    Concretely, one may define
+    \[
+    T_{[ijk]}=\psi^T C\,\gamma_{[i}\gamma_j\gamma_{k]}\psi,
+    \]
+    and this contains the irreducible 3-index information.
+  </p>
+
   <p>This is additional material to complement page 416 of Group Theory in a Nutshell by Anthony Zee.</p>
   <p>Created with assistance from ChatGPT.</p>
 </body>
