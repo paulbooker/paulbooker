@@ -1,128 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Why S⁺ and S⁻ Are Conjugates of Each Other</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://www.paulbooker.co.uk" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why \(S^+\) and \(S^-\) Are Conjugates of Each Other</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
-  <h1>Why <em>S</em><sup>+</sup> and <em>S</em><sup>−</sup> Are Conjugates of Each Other</h1>
+  <h1>Why \(S^+\) and \(S^-\) Are Conjugates of Each Other</h1>
 
   <p>
-    This is a subtle but really important point about spinor representations of
-    <em>SO</em>(2<em>n</em>). Let’s go through the logic in a clean, conceptual way.
+    This note explains why the two irreducible chiral spinor representations of \(SO(2n)\),
+    denoted \(S^+\) and \(S^-\), are either conjugate to each other or conjugate to themselves,
+    depending on whether \(n\) is odd or even.
   </p>
 
-  <h2>1. What does “complex conjugate representation” mean?</h2>
+  <h2>1. What it means for two representations to be complex conjugates</h2>
+
   <p>
-    A representation <em>R</em> is <em>complex conjugate</em> to <em>R</em>′ if there exists a matrix
-    <em>C</em> such that
+    A representation \(R\) is complex conjugate to a representation \(R'\) if there exists a matrix
+    \(C\) such that for every group element \(g\),
   </p>
-  <div class="math">
-    C<sup>−1</sup> R<sup>*</sup>(g) C = R′(g)
+
+  <div class="block">
+    \[
+      C^{-1} R^*(g) C = R'(g).
+    \]
   </div>
+
   <p>
-    for all group elements <em>g</em>.
+    So the problem is to determine what happens to the spinor representation after complex conjugation.
   </p>
+
+  <h2>2. Spinor transformation law</h2>
+
   <p>
-    So here, we want to understand how the complex conjugate of the spinor representation behaves.
+    For the two chiral spinor representations, the representation matrices are
   </p>
 
-  <h2>2. Start from how spinors transform</h2>
-  <p>You have:</p>
-  <div class="math">
-    ψ → exp[(i/4) ω<sub>ij</sub> σ<sub>ij</sub>] P<sub>±</sub> ψ
-  </div>
-  <p>So the representation matrices are:</p>
-  <div class="math">
-    R<sub>±</sub> = exp[(i/4) ω<sub>ij</sub> σ<sub>ij</sub>] P<sub>±</sub>
+  <div class="block">
+    \[
+      R_\pm = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} P_\pm,
+    \]
   </div>
 
-  <h2>3. Take the complex conjugate</h2>
-  <p>Complex conjugation gives:</p>
-  <div class="math">
-    R<sub>±</sub><sup>*</sup> = exp[−(i/4) ω<sub>ij</sub> σ<sub>ij</sub><sup>*</sup>] P<sub>±</sub><sup>*</sup>
-  </div>
   <p>
-    Now we want to relate this back to the original form using the charge conjugation matrix <em>C</em>.
+    where the chirality projectors are
   </p>
 
-  <h2>4. Use the key identities</h2>
-  <p>From the equations shown:</p>
-  <p><strong>(i) For the generators:</strong></p>
-  <div class="math">
-    C<sup>−1</sup> σ<sub>ij</sub><sup>*</sup> C = −σ<sub>ij</sub>
+  <div class="block">
+    \[
+      P_\pm = \frac{1}{2}(1 \pm \gamma_F).
+    \]
   </div>
 
-  <p><strong>(ii) For chirality:</strong></p>
-  <div class="math">
-    C<sub>n</sub><sup>−1</sup> γ<sub>F</sub> C<sub>n</sub> = (−1)<sup>n</sup> γ<sub>F</sub>
-  </div>
-
-  <h2>5. What happens to the projector?</h2>
-  <p>The chiral projectors are:</p>
-  <div class="math">
-    P<sub>±</sub> = 1/2 (1 ± γ<sub>F</sub>)
-  </div>
-  <p>Taking complex conjugation and conjugating by <em>C</em>:</p>
-  <div class="math">
-    C<sup>−1</sup> P<sub>±</sub><sup>*</sup> C = 1/2 (1 ± (−1)<sup>n</sup> γ<sub>F</sub>)
-  </div>
-
-  <p>So:</p>
-  <ul>
-    <li>If <em>n</em> is <strong>even</strong>, then (−1)<sup>n</sup> = +1, so P<sub>±</sub> → P<sub>±</sub>.</li>
-    <li>If <em>n</em> is <strong>odd</strong>, then (−1)<sup>n</sup> = −1, so P<sub>±</sub> → P<sub>∓</sub>.</li>
-  </ul>
-
-  <h2>6. Put it all together</h2>
-  <p>Now apply C<sup>−1</sup>(·)C to the full representation:</p>
-  <div class="math">
-    C<sup>−1</sup> R<sub>±</sub><sup>*</sup> C = exp[(i/4) ω<sub>ij</sub> σ<sub>ij</sub>] × (transformed projector)
-  </div>
-
-  <p><strong>For even <em>n</em>:</strong></p>
-  <div class="math">
-    C<sup>−1</sup> R<sub>±</sub><sup>*</sup> C = R<sub>±</sub>
-  </div>
-  <p>Each representation is equivalent to its own complex conjugate.</p>
-
-  <p><strong>For odd <em>n</em>:</strong></p>
-  <div class="math">
-    C<sup>−1</sup> R<sub>±</sub><sup>*</sup> C = R<sub>∓</sub>
-  </div>
-  <p>The complex conjugate of <em>S</em><sup>+</sup> is <em>S</em><sup>−</sup>, and vice versa.</p>
-
-  <h2>7. Final interpretation</h2>
   <p>
-    The only difference between <em>S</em><sup>+</sup> and <em>S</em><sup>−</sup> is the chirality projector.
-    Complex conjugation flips chirality when <em>n</em> is odd, but not when <em>n</em> is even.
+    The representations \(S^+\) and \(S^-\) are precisely the subspaces selected by \(P_+\) and \(P_-\).
   </p>
 
-  <div class="note">
-    <strong>Conclusion.</strong><br />
-    If <em>n</em> is even, then (S<sup>±</sup>)<sup>*</sup> ≅ S<sup>±</sup>.<br />
-    If <em>n</em> is odd, then (S<sup>+</sup>)<sup>*</sup> ≅ S<sup>−</sup> and (S<sup>−</sup>)<sup>*</sup> ≅ S<sup>+</sup>.
+  <h2>3. Complex conjugating the representation</h2>
+
+  <p>
+    Taking the complex conjugate gives
+  </p>
+
+  <div class="block">
+    \[
+      R_\pm^* = e^{-\frac{i}{4}\omega_{ij}\sigma_{ij}^*} P_\pm^*.
+    \]
   </div>
 
-  <h2>8. Intuition</h2>
   <p>
-    The whole effect comes from the sign in
+    To compare this with the original representation, we use a conjugation matrix \(C\).
   </p>
-  <div class="math">
-    C<sup>−1</sup> γ<sub>F</sub> C = (−1)<sup>n</sup> γ<sub>F</sub>
+
+  <h2>4. Two key identities</h2>
+
+  <p>
+    The needed identities are:
+  </p>
+
+  <div class="block">
+    \[
+      C^{-1} \sigma_{ij}^* C = -\sigma_{ij}
+    \]
+    and
+    \[
+      C^{-1} \gamma_F C = (-1)^n \gamma_F.
+    \]
   </div>
+
   <p>
-    This determines whether chirality is preserved or flipped under conjugation.
-    Since S<sup>±</sup> are defined by chirality, that is exactly what determines whether they map to themselves or to each other.
+    The first identity tells us how the generators behave under conjugation. The second identity tells us
+    what happens to chirality.
   </p>
-  <p>This is additional material to complement page 415 of Group Theory in a Nutshell by Anthony Zee.</p>
-  <p>Created with assistance from ChatGPT.</p>
+
+  <h2>5. What happens to the projector</h2>
+
+  <p>
+    Since
+  </p>
+
+  <div class="block">
+    \[
+      P_\pm = \frac{1}{2}(1 \pm \gamma_F),
+    \]
+  </div>
+
+  <p>
+    we obtain
+  </p>
+
+  <div class="block">
+    \[
+      C^{-1} P_\pm^* C
+      = \frac{1}{2}\bigl(1 \pm (-1)^n \gamma_F\bigr).
+    \]
+  </div>
+
+  <p>
+    Therefore:
+  </p>
+
+  <div class="block">
+    \[
+      C^{-1} P_\pm^* C =
+      \begin{cases}
+        P_\pm, & n \text{ even}, \\
+        P_\mp, & n \text{ odd}.
+      \end{cases}
+    \]
+  </div>
+
+  <h2>6. Putting everything together</h2>
+
+  <p>
+    Apply \(C^{-1}(\cdot)C\) to the complex conjugate representation:
+  </p>
+
+  <div class="block">
+    \[
+      C^{-1} R_\pm^* C
+      = C^{-1} \left(e^{-\frac{i}{4}\omega_{ij}\sigma_{ij}^*} P_\pm^*\right) C.
+    \]
+  </div>
+
+  <p>
+    Using \(C^{-1}\sigma_{ij}^*C=-\sigma_{ij}\), the exponential becomes
+  </p>
+
+  <div class="block">
+    \[
+      C^{-1} e^{-\frac{i}{4}\omega_{ij}\sigma_{ij}^*} C
+      = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}}.
+    \]
+  </div>
+
+  <p>
+    So we get
+  </p>
+
+  <div class="block">
+    \[
+      C^{-1} R_\pm^* C
+      = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} \left(C^{-1} P_\pm^* C\right).
+    \]
+  </div>
+
+  <p>
+    Now substitute the result for the projector.
+  </p>
+
+  <h2>7. Even and odd \(n\)</h2>
+
+  <p><strong>If \(n\) is even</strong>, then \(C^{-1}P_\pm^*C=P_\pm\), so</p>
+
+  <div class="block">
+    \[
+      C^{-1} R_\pm^* C = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} P_\pm = R_\pm.
+    \]
+  </div>
+
+  <p>
+    Thus each chiral representation is equivalent to its own complex conjugate:
+  </p>
+
+  <div class="block conclusion">
+    \[
+      (S^\pm)^* \cong S^\pm \qquad (n \text{ even}).
+    \]
+  </div>
+
+  <p><strong>If \(n\) is odd</strong>, then \(C^{-1}P_\pm^*C=P_\mp\), so</p>
+
+  <div class="block">
+    \[
+      C^{-1} R_\pm^* C = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} P_\mp = R_\mp.
+    \]
+  </div>
+
+  <p>
+    Therefore the complex conjugate of one chiral spinor is the other:
+  </p>
+
+  <div class="block conclusion">
+    \[
+      (S^+)^* \cong S^-, \qquad (S^-)^* \cong S^+ \qquad (n \text{ odd}).
+    \]
+  </div>
+
+  <h2>8. The main idea</h2>
+
+  <p>
+    The crucial point is that complex conjugation acts on the chirality operator through
+  </p>
+
+  <div class="block">
+    \[
+      C^{-1}\gamma_F C = (-1)^n \gamma_F.
+    \]
+  </div>
+
+  <p>
+    So:
+  </p>
+
+  <div class="block note">
+    <p>
+      When \(n\) is even, chirality is preserved under conjugation, so \(S^+\) and \(S^-\) are each
+      self-conjugate.
+    </p>
+    <p>
+      When \(n\) is odd, chirality is flipped under conjugation, so \(S^+\) and \(S^-\) are conjugates
+      of each other.
+    </p>
+  </div>
+
+  <h2>9. Final summary</h2>
+
+  <div class="block conclusion">
+    \[
+      \boxed{
+      \begin{aligned}
+      (S^\pm)^* &\cong S^\pm, && n \text{ even}, \\
+      (S^+)^* &\cong S^-, \quad (S^-)^* \cong S^+, && n \text{ odd}.
+      \end{aligned}}
+    \]
+  </div>
+
+  <p>
+    So the statement that \(S^+\) and \(S^-\) are conjugates of each other is true in the odd-\(n\) case.
+    In the even-\(n\) case, each one is instead conjugate to itself.
+  </p>
 </body>
 </html>
