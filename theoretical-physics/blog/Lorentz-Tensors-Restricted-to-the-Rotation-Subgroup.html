@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://www.paulbooker.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />v
+  <title>Lorentz Tensors Restricted to the Rotation Subgroup</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)'], ['$', '$']],
+        displayMath: [['\\[','\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <main class="page">
+    <h1>Lorentz Tensors Restricted to the Rotation Subgroup</h1>
+
+    <h2>1. The starting point: restricting Lorentz to rotations</h2>
+    <p>We begin with representations of the Lorentz group \(SO(1,3)\), and then restrict them to the rotation subgroup \(SO(3)\).</p>
+    <p>The key first step is:</p>
+    <div class="mathblock">\[
+      \mathbf{4} \longrightarrow \mathbf{3} \oplus \mathbf{1}
+    \]</div>
+    <p>Interpretation:</p>
+    <p>- \(A_0\) is a scalar under rotations, so it transforms as \(\mathbf{1}\).</p>
+    <p>- \(A_i\), with \(i=1,2,3\), are the spatial components, so they transform as an ordinary vector \(\mathbf{3}\).</p>
+
+    <h2>2. Build the tensor product</h2>
+    <p>Now consider a rank-2 Lorentz tensor:</p>
+    <div class="mathblock">\[
+      T_{\mu\nu} = A_\mu B_\nu
+    \]</div>
+    <p>Under restriction, this becomes:</p>
+    <div class="mathblock">\[
+      4 \otimes 4 \longrightarrow (3+1)\otimes(3+1)
+    \]</div>
+    <p>Expanding gives:</p>
+    <div class="mathblock">\[
+      (3+1)\otimes(3+1)=3\otimes3\oplus3\otimes1\oplus1\otimes3\oplus1\otimes1
+    \]</div>
+
+    <h2>3. Decompose each piece under \(SO(3)\)</h2>
+
+    <h3>(a) The spatial tensor \(3\otimes 3\)</h3>
+    <p>This is the place where symmetry and antisymmetry matter:</p>
+    <div class="mathblock">\[
+      3\otimes 3 = 5\oplus3\oplus1
+    \]</div>
+    <p>This corresponds to decomposing \(T_{ij}\) into:</p>
+    <p>- a symmetric traceless part, which gives \(5\),</p>
+    <p>- an antisymmetric part, which gives \(3\),</p>
+    <p>- and the trace, which gives \(1\).</p>
+
+    <h3>(b) The mixed components</h3>
+    <div class="mathblock">\[
+      3\otimes1 = 3 \qquad (T_{i0})
+    \]</div>
+    <div class="mathblock">\[
+      1\otimes3 = 3 \qquad (T_{0i})
+    \]</div>
+    <p>These are just vectors.</p>
+
+    <h3>(c) The scalar part</h3>
+    <div class="mathblock">\[
+      1\otimes1 = 1 \qquad (T_{00})
+    \]</div>
+
+    <h2>4. Full decomposition</h2>
+    <p>Putting everything together:</p>
+    <div class="mathblock">\[
+      4\otimes4 \longrightarrow 5\oplus3\oplus1\oplus3\oplus3\oplus1
+    \]</div>
+    <p>Equivalently,</p>
+    <div class="mathblock">\[
+      5+3+1+1+3+3
+    \]</div>
+
+    <h2>5. Understand each piece concretely</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Object</th>
+          <th>Representation under \(SO(3)\)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>\(T_{00}\)</td>
+          <td>scalar</td>
+          <td>\(1\)</td>
+        </tr>
+        <tr>
+          <td>\(T_{0i}\)</td>
+          <td>vector</td>
+          <td>\(3\)</td>
+        </tr>
+        <tr>
+          <td>\(T_{i0}\)</td>
+          <td>vector</td>
+          <td>\(3\)</td>
+        </tr>
+        <tr>
+          <td>\(T_{ij}\) symmetric traceless</td>
+          <td>spin-2 part</td>
+          <td>\(5\)</td>
+        </tr>
+        <tr>
+          <td>\(T_{ij}\) antisymmetric</td>
+          <td>vector-like part</td>
+          <td>\(3\)</td>
+        </tr>
+        <tr>
+          <td>trace \(T_{ii}\)</td>
+          <td>scalar</td>
+          <td>\(1\)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. Connect this to the Lorentz decomposition</h2>
+    <p>We also know that as a Lorentz representation,</p>
+    <div class="mathblock">\[
+      4\otimes4 = 6\oplus10
+    \]</div>
+    <p>where:</p>
+    <p>- \(6\) is the antisymmetric tensor \(T_{[\mu\nu]}\),</p>
+    <p>- \(10\) is the symmetric tensor \(T_{(\mu\nu)}\).</p>
+
+    <h2>7. Restrict each Lorentz piece to \(SO(3)\)</h2>
+
+    <h3>(A) The antisymmetric tensor \(6\)</h3>
+    <p>Split it into:</p>
+    <p>- \(T_{0i}\): 3 components, transforming as a vector,</p>
+    <p>- \(T_{ij}\): antisymmetric in 3 dimensions, also 3 components.</p>
+    <p>A key fact in three dimensions is:</p>
+    <div class="mathblock">\[
+      T_{ij} \longleftrightarrow \epsilon_{ijk} B_k
+    \]</div>
+    <p>So an antisymmetric spatial 2-tensor is equivalent to a vector. Therefore:</p>
+    <div class="mathblock">\[
+      \mathbf{6} \longrightarrow \mathbf{3}\oplus\mathbf{3}
+    \]</div>
+
+    <div class="note">
+      <strong>Important clarification.</strong> Both \(3\)'s come from the same antisymmetric Lorentz tensor. The split is not because one piece is antisymmetric and the other is not. Rather, once we restrict to rotations, the antisymmetric tensor breaks into time-space components and space-space components, and each of those transforms as a \(3\).
+    </div>
+
+    <h3>(B) The symmetric tensor \(10\)</h3>
+    <p>Now split the symmetric tensor into:</p>
+    <p>- \(T_{00}\), giving \(1\),</p>
+    <p>- \(T_{0i}=T_{i0}\), giving \(3\),</p>
+    <p>- symmetric spatial \(T_{ij}\), giving \(5\oplus1\).</p>
+    <p>Hence:</p>
+    <div class="mathblock">\[
+      \mathbf{10} \longrightarrow \mathbf{5}\oplus\mathbf{3}\oplus\mathbf{1}\oplus\mathbf{1}
+    \]</div>
+
+    <h2>8. Final structure</h2>
+    <div class="mathblock">\[
+      (6\oplus10) \longrightarrow (3\oplus3)\oplus(5\oplus3\oplus1\oplus1)
+    \]</div>
+    <p>which is exactly the same as:</p>
+    <div class="mathblock">\[
+      5+3+1+1+3+3
+    \]</div>
+
+    <h2>9. Key conceptual insights</h2>
+
+    <h3>(1) Why symmetry matters only sometimes</h3>
+    <p>Symmetry and antisymmetry only apply when the two indices are of the same kind. So:</p>
+    <p>- \(T_{ij}\) can be split into symmetric and antisymmetric parts,</p>
+    <p>- but \(T_{0i}\) and \(T_{i0}\) cannot.</p>
+
+    <h3>(2) Why antisymmetric \(T_{ij}\) becomes a vector</h3>
+    <p>In three dimensions, an antisymmetric 2-tensor has three independent components, and using \(\epsilon_{ijk}\) it can be identified with a vector.</p>
+
+    <h3>(3) Why \(6=3+3\)</h3>
+    <p>The reason is that after separating time from space, the antisymmetric Lorentz tensor splits into:</p>
+    <p>- time-space components, transforming as a vector, and</p>
+    <p>- space-space components, dual to a vector.</p>
+
+    <h3>(4) Physical interpretation</h3>
+    <p>For the electromagnetic tensor \(F_{\mu\nu}\), we have:</p>
+    <div class="mathblock">\[
+      F_{0i} \sim E_i
+    \]</div>
+    <div class="mathblock">\[
+      F_{ij} \sim \epsilon_{ijk} B_k
+    \]</div>
+    <p>So:</p>
+    <div class="mathblock">\[
+      6 \rightarrow 3\oplus3
+    \]</div>
+    <p>corresponding to the electric and magnetic fields.</p>
+
+    <h3>(5) The big picture</h3>
+    <p>Restricting from the Lorentz group to the rotation subgroup separates time from space and reorganizes everything into familiar spin representations:</p>
+    <div class="mathblock">\[
+      \text{spin }0 \rightarrow 1, \qquad \text{spin }1 \rightarrow 3, \qquad \text{spin }2 \rightarrow 5
+    \]</div>
+
+    <h2>10. Final intuition</h2>
+    <p>A good way to think about the whole process is:</p>
+    <div class="note">
+      Take a relativistic object and ask what it looks like to someone who is only allowed to rotate space. Then the Lorentz representations naturally reorganize into \(SO(3)\) spin multiplets.
+    </div>
+    <p>That viewpoint leads directly to:</p>
+    <div class="mathblock">\[
+      4\rightarrow3+1, \qquad 4\otimes4 \rightarrow 5+3+1+1+3+3
+    \]</div>
+
+    <div class="footer">
+      Prepared as a standalone HTML page with MathJax rendering.
+    </div>
+  </main>
+</body>
+</html>
