@@ -16,22 +16,14 @@ body {
 		color: #FF073A;
 	}
 
-	.math {
-		border-style: solid;
-    padding: 10px 14px;
-    border-left: 4px solid #ccc;
-    overflow-x: auto;
+  /* theoretical physics blog */
+  .mathblock {
+      overflow-x: auto;
+      margin: 0.9rem 0;
   }
   .note {
-    border-left: 4px solid #d9c36a;
+    border-left: 4px solid #C0C0C0;
     padding: 12px 14px;
     margin: 1em 0;
-  }
-  ul {
-    margin-top: 0.4em;
-  }
-  code {
-    padding: 0.1em 0.3em;
-    border-radius: 4px;
   }
 }
