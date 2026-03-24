@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://www.paulbooker.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SO(3,1) Adjoint Representation as an Antisymmetric Tensor</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)'], ['$', '$']],
+        displayMath: [['\\[','\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <h1>Showing that for \(SO(3,1)\) the adjoint is the two-index antisymmetric tensor</h1>
+
+  <p>
+    Yes. For \(SO(3,1)\), the adjoint representation is naturally identified with the space of antisymmetric rank-2 tensors.
+  </p>
+
+  <h2>1. Start from the definition of the Lie algebra</h2>
+
+  <p>
+    The group \(SO(3,1)\) is the set of linear transformations preserving the Minkowski metric
+  </p>
+
+  <div class="mathblock">
+    \[
+      \eta = \mathrm{diag}(1,-1,-1,-1),
+    \]
+  </div>
+
+  <p>so its elements satisfy</p>
+
+  <div class="mathblock">
+    \[
+      \Lambda^T \eta \Lambda = \eta.
+    \]
+  </div>
+
+  <p>
+    The Lie algebra \(so(3,1)\) consists of infinitesimal transformations. Write
+  </p>
+
+  <div class="mathblock">
+    \[
+      \Lambda = I + \omega,
+    \]
+  </div>
+
+  <p>with \(\omega\) infinitesimal. Substituting into</p>
+
+  <div class="mathblock">
+    \[
+      \Lambda^T \eta \Lambda = \eta
+    \]
+  </div>
+
+  <p>gives</p>
+
+  <div class="mathblock">
+    \[
+      (I+\omega)^T \eta (I+\omega)=\eta.
+    \]
+  </div>
+
+  <p>Keeping only first-order terms,</p>
+
+  <div class="mathblock">
+    \[
+      \omega^T \eta + \eta \omega = 0.
+    \]
+  </div>
+
+  <p>In index notation this is</p>
+
+  <div class="mathblock">
+    \[
+      \eta_{\mu\rho}\,\omega^\rho{}_{\nu}+\eta_{\nu\rho}\,\omega^\rho{}_{\mu}=0.
+    \]
+  </div>
+
+  <p>Now lower an index:</p>
+
+  <div class="mathblock">
+    \[
+      \omega_{\mu\nu} \equiv \eta_{\mu\rho}\,\omega^\rho{}_{\nu}.
+    \]
+  </div>
+
+  <p>Then the condition becomes</p>
+
+  <div class="mathblock">
+    \[
+      \omega_{\mu\nu} + \omega_{\nu\mu}=0,
+    \]
+  </div>
+
+  <p>so</p>
+
+  <div class="mathblock">
+    \[
+      \omega_{\mu\nu} = -\omega_{\nu\mu}.
+    \]
+  </div>
+
+  <p>
+    Thus an element of the Lie algebra \(so(3,1)\) is exactly an antisymmetric 2-index object.
+  </p>
+
+  <h2>2. Count dimensions</h2>
+
+  <p>In 4 dimensions, an antisymmetric tensor \(A_{\mu\nu}\) has</p>
+
+  <div class="mathblock">
+    \[
+      \binom{4}{2}=6
+    \]
+  </div>
+
+  <p>independent components. Also,</p>
+
+  <div class="mathblock">
+    \[
+      \dim so(3,1)=\frac{4(4-1)}{2}=6.
+    \]
+  </div>
+
+  <p>
+    So the Lie algebra has the same dimension as the space of antisymmetric 2-tensors.
+  </p>
+
+  <h2>3. Why this is the adjoint representation</h2>
+
+  <p>
+    The adjoint representation is the action of the group on its own Lie algebra:
+  </p>
+
+  <div class="mathblock">
+    \[
+      X \mapsto \Lambda X \Lambda^{-1},
+      \qquad X \in so(3,1).
+    \]
+  </div>
+
+  <p>
+    If we write \(X\) with lowered indices as \(X_{\mu\nu}=-X_{\nu\mu}\), then under a Lorentz transformation it becomes
+  </p>
+
+  <div class="mathblock">
+    \[
+      X'_{\mu\nu}
+      = \Lambda_\mu{}^\rho \, \Lambda_\nu{}^\sigma \, X_{\rho\sigma}.
+    \]
+  </div>
+
+  <p>
+    That is exactly how a rank-2 tensor transforms, and since antisymmetry is preserved,
+  </p>
+
+  <div class="mathblock">
+    \[
+      X'_{\mu\nu} = -X'_{\nu\mu},
+    \]
+  </div>
+
+  <p>
+    it transforms specifically as an antisymmetric rank-2 tensor.
+    So the adjoint action of \(SO(3,1)\) on \(so(3,1)\) is precisely the tensor transformation law for an antisymmetric 2-tensor.
+  </p>
+
+  <h2>4. Basis form</h2>
+
+  <p>A standard basis for the Lie algebra is \(M_{\mu\nu}\), with</p>
+
+  <div class="mathblock">
+    \[
+      M_{\mu\nu}=-M_{\nu\mu},
+    \]
+  </div>
+
+  <p>so there are 6 generators:</p>
+
+  <div class="mathblock">
+    \[
+      M_{01},\, M_{02},\, M_{03},\, M_{12},\, M_{13},\, M_{23}.
+    \]
+  </div>
+
+  <p>Any Lie algebra element can be written as</p>
+
+  <div class="mathblock">
+    \[
+      X=\frac12 \, \omega^{\mu\nu} M_{\mu\nu},
+      \qquad \omega^{\mu\nu}=-\omega^{\nu\mu}.
+    \]
+  </div>
+
+  <p>
+    Again, the coefficients \(\omega^{\mu\nu}\) are antisymmetric in two indices, showing the adjoint is carried by antisymmetric 2-index objects.
+  </p>
+
+  <h2>5. Relation to rotations and boosts</h2>
+
+  <p>These 6 components split into</p>
+
+  <p>
+    3 boost generators: \(M_{0i}\)<br />
+    3 rotation generators: \(M_{ij}\)
+  </p>
+
+  <p>
+    So the antisymmetric tensor \(A_{\mu\nu}\) contains exactly the \(3+3\) degrees of freedom expected for the Lorentz algebra.
+  </p>
+
+  <div class="note">
+    The key idea is that preserving the Minkowski metric forces an infinitesimal Lorentz generator to be antisymmetric after lowering one index with \(\eta_{\mu\nu}\). That is why the Lie algebra, and hence the adjoint representation, is the antisymmetric two-index tensor representation.
+  </div>
+
+  <h2>Conclusion</h2>
+
+  <p>
+    For \(SO(3,1)\), the Lie algebra consists of matrices satisfying
+  </p>
+
+  <div class="mathblock">
+    \[
+      X^T\eta+\eta X=0,
+    \]
+  </div>
+
+  <p>which is equivalent to saying</p>
+
+  <div class="mathblock">
+    \[
+      X_{\mu\nu}=-X_{\nu\mu}.
+    \]
+  </div>
+
+  <p>
+    So the Lie algebra is the space of antisymmetric rank-2 tensors, and since the adjoint representation is the group acting on its Lie algebra, the adjoint representation is the two-index antisymmetric tensor representation.
+  </p>
+
+  <div class="mathblock conclusion">
+    \[
+      \boxed{\mathrm{Adj}(SO(3,1)) \cong \Lambda^2(\mathbb{R}^{3,1})}
+    \]
+    \[
+      \boxed{\dim = 6}
+    \]
+  </div>
+  <p>Created with assistance from ChatGPT.</p>
+</body>
+</html>
