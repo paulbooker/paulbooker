@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://www.paulbooker.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why a Unitary L Gives a Rotation</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)'], ['$', '$']],
+        displayMath: [['\\[','\\]'], ['$$','$$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<body>
+  <h1>Why a Unitary \(L\) Gives a Rotation</h1>
+
+  <p>Start from Zee’s map</p>
+
+  <div>
+    \[
+    X_M=x^0 I-\vec x\cdot \vec \sigma,
+    \qquad
+    X_M' = L^\dagger X_M L,
+    \]
+  </div>
+
+  <p>with \(L\in SL(2,\mathbb C)\).</p>
+
+  <p>We want to show that when \(L\) is <strong>unitary</strong>, so \(L\in SU(2)\), the induced Lorentz transformation leaves \(x^0\) unchanged and rotates only \(\vec x\).</p>
+
+  <h2>Step 1: Use unitarity</h2>
+
+  <p>If \(L\) is unitary, then</p>
+
+  <div>
+    \[
+    L^\dagger L=I.
+    \]
+  </div>
+
+  <p>So</p>
+
+  <div>
+    \[
+    X_M' = L^\dagger (x^0 I-\vec x\cdot\vec \sigma)L
+          = x^0 L^\dagger I L - L^\dagger(\vec x\cdot\vec\sigma)L
+          = x^0 I - L^\dagger(\vec x\cdot\vec\sigma)L.
+    \]
+  </div>
+
+  <p>Hence the coefficient of \(I\) is still \(x^0\). Therefore</p>
+
+  <div>
+    \[
+    x'^0=x^0.
+    \]
+  </div>
+
+  <p>So the transformation does not mix time with space. That is already the hallmark of a spatial rotation.</p>
+
+  <h2>Step 2: Show the Pauli matrices transform into a linear combination of themselves</h2>
+
+  <p>Write</p>
+
+  <div>
+    \[
+    L^\dagger \sigma_i L = \sum_j R_{ij}\sigma_j.
+    \]
+  </div>
+
+  <p>Why is there no identity piece? Because each \(\sigma_i\) is traceless, and similarity transformations preserve trace:</p>
+
+  <div>
+    \[
+    \operatorname{tr}(L^\dagger \sigma_i L)=\operatorname{tr}(\sigma_i)=0.
+    \]
+  </div>
+
+  <p>So \(L^\dagger \sigma_i L\) is again a traceless Hermitian \(2\times 2\) matrix, and the Pauli matrices form a basis for such matrices.</p>
+
+  <p>Thus</p>
+
+  <div>
+    \[
+    L^\dagger(\vec x\cdot \vec \sigma)L
+    = x_i\,L^\dagger \sigma_i L
+    = x_i R_{ij}\sigma_j.
+    \]
+  </div>
+
+  <p>Therefore</p>
+
+  <div>
+    \[
+    X_M' = x^0 I - x_iR_{ij}\sigma_j.
+    \]
+  </div>
+
+  <p>Comparing with</p>
+
+  <div>
+    \[
+    X_M' = x'^0 I-\vec x'\cdot \vec \sigma,
+    \]
+  </div>
+
+  <p>we get</p>
+
+  <div>
+    \[
+    x'^0=x^0,
+    \qquad x'_j=R_{ij}x_i.
+    \]
+  </div>
+
+  <p>So the spatial part transforms linearly by a \(3\times 3\) matrix \(R\).</p>
+
+  <h2>Step 3: Show \(R\) is an orthogonal matrix</h2>
+
+  <p>Because the full transformation preserves</p>
+
+  <div>
+    \[
+    (x^0)^2-\vec x^{\,2},
+    \]
+  </div>
+
+  <p>and we already know \(x'^0=x^0\), it follows that</p>
+
+  <div>
+    \[
+    \vec x'^{\,2}=\vec x^{\,2}.
+    \]
+  </div>
+
+  <p>So</p>
+
+  <div>
+    \[
+    (R\vec x)^2=\vec x^{\,2}
+    \quad\text{for all }\vec x.
+    \]
+  </div>
+
+  <p>Hence</p>
+
+  <div>
+    \[
+    R^T R=I.
+    \]
+  </div>
+
+  <p>Thus \(R\in O(3)\).</p>
+
+  <h2>Step 4: Show it is a proper rotation, not a reflection</h2>
+
+  <p>Since \(SU(2)\) is connected and \(L=I\) gives \(R=I\), the image of \(SU(2)\) lies in the component of \(O(3)\) connected to the identity, namely \(SO(3)\). Equivalently,</p>
+
+  <div>
+    \[
+    \det R=+1.
+    \]
+  </div>
+
+  <p>So \(R\) is a genuine rotation matrix.</p>
+
+  <h2>Conclusion</h2>
+
+  <p>If \(L\in SU(2)\), then</p>
+
+  <div>
+    \[
+    X_M' = L^\dagger X_M L
+    \]
+  </div>
+
+  <p>induces</p>
+
+  <div>
+    \[
+    x'^0=x^0,
+    \qquad \vec x' = R\vec x,
+    \qquad R\in SO(3).
+    \]
+  </div>
+
+  <p>Therefore the Lorentz transformation is a <strong>spatial rotation</strong>.</p>
+
+  <h2>A compact way to say it</h2>
+
+  <p>For unitary \(L\),</p>
+
+  <div>
+    \[
+    L^\dagger I L=I,
+    \]
+  </div>
+
+  <p>so time is unchanged, and</p>
+
+  <div>
+    \[
+    L^\dagger \sigma_i L = R_{ij}\sigma_j
+    \]
+  </div>
+
+  <p>with \(R\in SO(3)\), so only the spatial vector rotates.</p>
+</body>
+</html>
