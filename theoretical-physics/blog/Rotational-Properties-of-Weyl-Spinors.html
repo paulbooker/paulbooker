@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://www.paulbooker.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotational Properties of Weyl Spinors</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <h1>Rotational Properties of \(u^\dagger u\) and \(u^\dagger \boldsymbol{\sigma} u\)</h1>
+
+  <p>
+    Let \(u\) be a left-handed Weyl spinor transforming in the \(\left(\tfrac12,0\right)\)
+    representation. Under an infinitesimal spatial rotation by a small angle vector
+    \(\delta\boldsymbol{\theta}\),
+  </p>
+
+  \[
+    u \to u' = \left(1-\frac{i}{2}\,\delta\boldsymbol{\theta}\!\cdot\!\boldsymbol{\sigma}\right)u.
+  \]
+
+  <p>Equivalently, for a finite rotation,</p>
+
+  \[
+    u \to u' = S\,u,
+    \qquad
+    S = \exp\!\left(-\frac{i}{2}\,\boldsymbol{\theta}\!\cdot\!\boldsymbol{\sigma}\right).
+  \]
+
+  <p>
+    Since \(\sigma_i^\dagger=\sigma_i\), we have
+  </p>
+
+  \[
+    S^\dagger = \exp\!\left(+\frac{i}{2}\,\boldsymbol{\theta}\!\cdot\!\boldsymbol{\sigma}\right)=S^{-1},
+  \]
+
+  <p>so \(S\) is unitary.</p>
+
+  <p>The statement to prove is:</p>
+
+  \[
+    u^\dagger u \text{ is a scalar under rotations,}
+    \qquad
+    u^\dagger \sigma_i u \text{ transforms as a 3-vector.}
+  \]
+
+  <p>I will show both.</p>
+
+  <h2>1. Proving that \(u^\dagger u\) is invariant</h2>
+
+  <p>Under the rotation,</p>
+
+  \[
+    u' = Su,
+    \qquad
+    u'^\dagger = u^\dagger S^\dagger.
+  \]
+
+  <p>Therefore</p>
+
+  \[
+    u'^\dagger u' = u^\dagger S^\dagger S u.
+  \]
+
+  <p>But \(S^\dagger S=1\), so</p>
+
+  \[
+    u'^\dagger u' = u^\dagger u.
+  \]
+
+  <p>So \(u^\dagger u\) is invariant under rotations.</p>
+
+  <h2>2. Proving that \(u^\dagger \boldsymbol{\sigma} u\) transforms as a vector</h2>
+
+  <p>Define</p>
+
+  \[
+    V_i \equiv u^\dagger \sigma_i u.
+  \]
+
+  <p>Under the rotation,</p>
+
+  \[
+    V_i' = u'^\dagger \sigma_i u'
+         = u^\dagger S^\dagger \sigma_i S u.
+  \]
+
+  <p>So the whole question reduces to showing that</p>
+
+  \[
+    S^\dagger \sigma_i S = R_{ij}\sigma_j,
+  \]
+
+  <p>where \(R_{ij}\) is the ordinary \(3\times 3\) rotation matrix. Then it follows immediately that</p>
+
+  \[
+    V_i' = u^\dagger (R_{ij}\sigma_j)u
+         = R_{ij}\,u^\dagger \sigma_j u
+         = R_{ij}V_j,
+  \]
+
+  <p>which is exactly the transformation law of a 3-vector.</p>
+
+  <p>So let us prove</p>
+
+  \[
+    S^\dagger \sigma_i S = R_{ij}\sigma_j.
+  \]
+
+  <h2>3. Infinitesimal proof</h2>
+
+  <p>Take</p>
+
+  \[
+    S = 1-\frac{i}{2}\delta\theta_k \sigma_k,
+    \qquad
+    S^\dagger = 1+\frac{i}{2}\delta\theta_k \sigma_k.
+  \]
+
+  <p>Then</p>
+
+  \[
+    S^\dagger \sigma_i S
+    =
+    \left(1+\frac{i}{2}\delta\theta_k \sigma_k\right)\sigma_i
+    \left(1-\frac{i}{2}\delta\theta_\ell \sigma_\ell\right).
+  \]
+
+  <p>Keeping only first-order terms in \(\delta\boldsymbol{\theta}\),</p>
+
+  \[
+    S^\dagger \sigma_i S
+    =
+    \sigma_i
+    +\frac{i}{2}\delta\theta_k \sigma_k\sigma_i
+    -\frac{i}{2}\delta\theta_\ell \sigma_i\sigma_\ell.
+  \]
+
+  <p>Rename the dummy index \(\ell\to k\):</p>
+
+  \[
+    S^\dagger \sigma_i S
+    =
+    \sigma_i
+    +\frac{i}{2}\delta\theta_k(\sigma_k\sigma_i-\sigma_i\sigma_k).
+  \]
+
+  <p>Thus</p>
+
+  \[
+    S^\dagger \sigma_i S
+    =
+    \sigma_i+\frac{i}{2}\delta\theta_k[\sigma_k,\sigma_i].
+  \]
+
+  <p>Now use the Pauli commutator relation</p>
+
+  \[
+    [\sigma_k,\sigma_i]=2i\,\epsilon_{kij}\sigma_j.
+  \]
+
+  <p>So</p>
+
+  \[
+    S^\dagger \sigma_i S
+    =
+    \sigma_i+\frac{i}{2}\delta\theta_k(2i\,\epsilon_{kij}\sigma_j)
+    =
+    \sigma_i-\delta\theta_k\epsilon_{kij}\sigma_j.
+  \]
+
+  <p>Using antisymmetry of \(\epsilon_{kij}\),</p>
+
+  \[
+    -\epsilon_{kij}=\epsilon_{ikj},
+  \]
+
+  <p>hence</p>
+
+  \[
+    S^\dagger \sigma_i S
+    =
+    \sigma_i+\delta\theta_k\epsilon_{ikj}\sigma_j.
+  \]
+
+  <p>This is exactly the infinitesimal rotation law for a vector:</p>
+
+  \[
+    V_i' = V_i+\delta\theta_k\epsilon_{ikj}V_j.
+  \]
+
+  <p>Therefore \(u^\dagger \sigma_i u\) transforms as a 3-vector.</p>
+
+  <h2>4. Writing it explicitly for the bilinear</h2>
+
+  <p>Start from</p>
+
+  \[
+    V_i'=u'^\dagger\sigma_i u'
+    =
+    u^\dagger S^\dagger \sigma_i S u.
+  \]
+
+  <p>Using the result above,</p>
+
+  \[
+    S^\dagger \sigma_i S
+    =
+    \sigma_i+\delta\theta_k\epsilon_{ikj}\sigma_j,
+  \]
+
+  <p>we get</p>
+
+  \[
+    V_i'
+    =
+    u^\dagger\left(\sigma_i+\delta\theta_k\epsilon_{ikj}\sigma_j\right)u
+    =
+    u^\dagger\sigma_i u+\delta\theta_k\epsilon_{ikj}u^\dagger\sigma_j u.
+  \]
+
+  <p>So</p>
+
+  \[
+    V_i' = V_i+\delta\theta_k\epsilon_{ikj}V_j.
+  \]
+
+  <p>That is the standard infinitesimal transformation rule for a 3-vector.</p>
+
+  <h2>5. Why this is natural</h2>
+
+  <p>
+    The Pauli matrices themselves carry the vector index \(i=1,2,3\). The spinor indices are hidden
+    in the matrix multiplication, but the object
+  </p>
+
+  \[
+    u^\dagger \sigma_i u
+  \]
+
+  <p>
+    still has one free spatial index \(i\), so it is the natural candidate for a vector.
+    The calculation above shows that it really does transform correctly.
+  </p>
+
+  <p>By contrast,</p>
+
+  \[
+    u^\dagger u
+  \]
+
+  <p>has no free spatial index, so it is a scalar, and the unitarity of the spinor rotation matrix makes this explicit.</p>
+
+  <h2>6. One-line summary</h2>
+
+  <p>Under \(u\to Su\) with \(S=\exp\!\big(-\frac{i}{2}\theta\cdot\sigma\big)\),</p>
+
+  \[
+    u^\dagger u \to u^\dagger S^\dagger S u = u^\dagger u,
+  \]
+
+  <p>and</p>
+
+  \[
+    u^\dagger \sigma_i u \to u^\dagger S^\dagger \sigma_i S u
+    = R_{ij}\,u^\dagger \sigma_j u.
+  \]
+
+  <p>So \(u^\dagger u\) is a rotational scalar, while \(u^\dagger\boldsymbol{\sigma}u\) is a rotational 3-vector.</p>
+  <p>This is additional material to complement page 459 of Group Theory in a Nutshell by Anthony Zee.</p>
+  <p>Created with assistance from ChatGPT.</p>
+</body>
+</html>
