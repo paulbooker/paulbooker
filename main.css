@@ -9,7 +9,7 @@ body {
 	border-radius: 20px;
 	border-style: dashed;	
 	}
-	.work {
+	.work, .blog {
 		color: #03DAC6;
 	}
 	.referrals {
