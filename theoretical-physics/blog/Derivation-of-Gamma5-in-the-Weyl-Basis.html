@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://www.paulbooker.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derivation of \(\gamma_5\) in the Weyl Basis</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <h1>Derivation of \(\gamma_5\) in the Weyl Basis</h1>
+
+  <p><strong>Question.</strong> Would you show how to derive the following?</p>
+
+  <p>Starting from the Weyl-basis definitions used in the line shown,</p>
+
+  \[
+  \gamma^0 = I\otimes \tau_1,
+  \qquad
+  \gamma^i = \sigma^i \otimes (-i\tau_2)
+  \quad (i=1,2,3),
+  \]
+
+  <p>we want to derive</p>
+
+  \[
+  \gamma_5 \equiv i\gamma^0\gamma^1\gamma^2\gamma^3 = I\otimes \tau_3.
+  \]
+
+  <p>We proceed step by step.</p>
+
+  <p>Begin with</p>
+
+  \[
+  \gamma_5
+  =
+  i\gamma^0\gamma^1\gamma^2\gamma^3
+  =
+  i\,(I\otimes \tau_1)\,
+  (\sigma^1\otimes (-i\tau_2))\,
+  (\sigma^2\otimes (-i\tau_2))\,
+  (\sigma^3\otimes (-i\tau_2)).
+  \]
+
+  <p>Now use the tensor-product multiplication rule</p>
+
+  \[
+  (A\otimes B)(C\otimes D)=(AC)\otimes(BD).
+  \]
+
+  <p>So the product becomes</p>
+
+  \[
+  \gamma_5
+  =
+  i\,
+  (I\sigma^1\sigma^2\sigma^3)
+  \otimes
+  \bigl(\tau_1(-i\tau_2)(-i\tau_2)(-i\tau_2)\bigr).
+  \]
+
+  <p>Since \(I\sigma^1\sigma^2\sigma^3=\sigma^1\sigma^2\sigma^3\), this is</p>
+
+  \[
+  \gamma_5
+  =
+  i\,(\sigma^1\sigma^2\sigma^3)\otimes
+  \bigl(\tau_1(-i)^3\tau_2^3\bigr).
+  \]
+
+  <p>We now simplify the two factors separately.</p>
+
+  <h2>1. Simplifying \(\sigma^1\sigma^2\sigma^3\)</h2>
+
+  <p>Using the Pauli-matrix relation</p>
+
+  \[
+  \sigma^1\sigma^2 = i\sigma^3,
+  \]
+
+  <p>we get</p>
+
+  \[
+  \sigma^1\sigma^2\sigma^3
+  =
+  (i\sigma^3)\sigma^3
+  =
+  i\,(\sigma^3)^2
+  =
+  iI.
+  \]
+
+  <p>Thus</p>
+
+  \[
+  \sigma^1\sigma^2\sigma^3 = iI.
+  \]
+
+  <h2>2. Simplifying \(\tau_1(-i)^3\tau_2^3\)</h2>
+
+  <p>Since \(\tau_2^2=I\), we have</p>
+
+  \[
+  \tau_2^3=\tau_2.
+  \]
+
+  <p>Also,</p>
+
+  \[
+  (-i)^3 = i.
+  \]
+
+  <p>So</p>
+
+  \[
+  \tau_1(-i)^3\tau_2^3
+  =
+  \tau_1(i)\tau_2
+  =
+  i\,\tau_1\tau_2.
+  \]
+
+  <p>Now use the Pauli relation</p>
+
+  \[
+  \tau_1\tau_2 = i\tau_3.
+  \]
+
+  <p>Therefore</p>
+
+  \[
+  i\,\tau_1\tau_2
+  =
+  i(i\tau_3)
+  =
+  -\tau_3.
+  \]
+
+  <p>So the second factor is</p>
+
+  \[
+  \tau_1(-i)^3\tau_2^3 = -\tau_3.
+  \]
+
+  <h2>3. Putting the factors together</h2>
+
+  <p>Substituting both factors back in,</p>
+
+  \[
+  \gamma_5
+  =
+  i\,(iI)\otimes(-\tau_3).
+  \]
+
+  <p>Since \(i\cdot i = -1\),</p>
+
+  \[
+  \gamma_5
+  =
+  (-1)I\otimes(-\tau_3)
+  =
+  I\otimes\tau_3.
+  \]
+
+  <p>Hence</p>
+
+  \[
+  \boxed{\gamma_5 = I\otimes \tau_3}.
+  \]
+
+  <p>Now write \(I\otimes \tau_3\) explicitly. Since</p>
+
+  \[
+  \tau_3=
+  \begin{pmatrix}
+  1 & 0\\
+  0 & -1
+  \end{pmatrix},
+  \]
+
+  <p>we have</p>
+
+  \[
+  I\otimes \tau_3
+  =
+  \begin{pmatrix}
+  I & 0\\
+  0 & -I
+  \end{pmatrix}.
+  \]
+
+  <p>So finally,</p>
+
+  \[
+  \boxed{
+  \gamma_5
+  =
+  i\gamma^0\gamma^1\gamma^2\gamma^3
+  =
+  I\otimes \tau_3
+  =
+  \begin{pmatrix}
+  I & 0\\
+  0 & -I
+  \end{pmatrix}}
+  \]
+
+  <p>This is additional material to complement page 473 of Group Theory in a Nutshell by Anthony Zee.</p>
+  <p>Created with assistance from ChatGPT.</p>
+</body>
+</html>
