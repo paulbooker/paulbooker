@@ -6,14 +6,9 @@
   <title>Why the Majorana Equation Preserves Handedness</title>
   <script>
     window.MathJax = {
-      loader: { load: ['[tex]/physics'] },
       tex: {
-        packages: { '[+]': ['physics'] },
-        inlineMath: [['\(','\)'], ['$', '$']],
-        displayMath: [['\[','\]'], ['$$','$$']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['\\[','\\]']]
       }
     };
   </script>
@@ -48,20 +43,8 @@
       margin: 0.8em 0;
       font-size: 1.08rem;
     }
-    .lead {
-      font-size: 1.14rem;
-    }
     .equation-block {
       margin: 1em 0;
-    }
-    .conclusion {
-      margin-top: 1.25em;
-      padding-top: 0.25em;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid #d9d9d9;
-      margin: 2em 0;
     }
   </style>
 </head>
@@ -69,19 +52,15 @@
   <div class="page">
     <h1>Why the Majorana Equation Preserves Handedness</h1>
 
-    <p class="lead">
-      We want to understand why the equation
-    </p>
+    <p>We want to understand why the equation</p>
 
     <div class="equation-block">
       \[
-      i\slashed{\partial}\psi = m\,\psi_c
+      i\gamma^\mu \partial_\mu \psi = m\psi_c
       \]
     </div>
 
-    <p>
-      does not mix independent left- and right-handed fields, unlike the Dirac equation.
-    </p>
+    <p>does not mix independent left-handed and right-handed fields, unlike the Dirac equation.</p>
 
     <h2>1. Chirality and projectors</h2>
 
@@ -99,7 +78,7 @@
     <div class="equation-block">
       \[
       \gamma^5 \psi_L = -\psi_L, \qquad
-      \gamma^5 \psi_R = +\psi_R.
+      \gamma^5 \psi_R = +\psi_R
       \]
     </div>
 
@@ -109,11 +88,11 @@
 
     <div class="equation-block">
       \[
-      \{\gamma^5, \gamma^\mu\} = 0.
+      \{\gamma^5, \gamma^\mu\} = 0
       \]
     </div>
 
-    <p>This immediately implies that \(\gamma^\mu\) flips chirality.</p>
+    <p>This implies that \(\gamma^\mu\) flips chirality.</p>
 
     <h2>3. The derivative term flips chirality</h2>
 
@@ -121,7 +100,7 @@
 
     <div class="equation-block">
       \[
-      i\slashed{\partial}\psi_L = i\gamma^\mu \partial_\mu \psi_L.
+      i\gamma^\mu \partial_\mu \psi_L
       \]
     </div>
 
@@ -132,7 +111,7 @@
       \gamma^5 (i\gamma^\mu \partial_\mu \psi_L)
       = i(-\gamma^\mu \gamma^5)\partial_\mu \psi_L
       = i(-\gamma^\mu)(-\partial_\mu \psi_L)
-      = i\gamma^\mu \partial_\mu \psi_L.
+      = i\gamma^\mu \partial_\mu \psi_L
       \]
     </div>
 
@@ -140,12 +119,12 @@
 
     <div class="equation-block">
       \[
-      \gamma^5 (i\slashed{\partial}\psi_L)
-      = +\, i\slashed{\partial}\psi_L.
+      \gamma^5 (i\gamma^\mu \partial_\mu \psi_L)
+      = + i\gamma^\mu \partial_\mu \psi_L
       \]
     </div>
 
-    <p>Therefore, \(i\slashed{\partial}\psi_L\) is right-handed.</p>
+    <p>Therefore \(i\gamma^\mu \partial_\mu \psi_L\) is right-handed.</p>
 
     <h2>4. Charge conjugation flips chirality</h2>
 
@@ -153,7 +132,7 @@
 
     <div class="equation-block">
       \[
-      \psi_c = \gamma^2 \psi^*.
+      \psi_c = \gamma^2 \psi^*
       \]
     </div>
 
@@ -161,7 +140,7 @@
 
     <div class="equation-block">
       \[
-      \gamma^2 (\gamma^5)^* = -\gamma^5 \gamma^2.
+      \gamma^2 (\gamma^5)^* = -\gamma^5 \gamma^2
       \]
     </div>
 
@@ -171,29 +150,19 @@
       \[
       \gamma^5 \psi_c
       = \gamma^5 \gamma^2 \psi^*
-      = -\gamma^2 (\gamma^5 \psi)^*.
+      = -\gamma^2 (\gamma^5 \psi)^*
       \]
     </div>
 
-    <p>
-      If \(\psi = \psi_L\), then \(\gamma^5 \psi = -\psi\), so
-    </p>
+    <p>If \(\psi = \psi_L\), then \(\gamma^5 \psi = -\psi\), so</p>
 
     <div class="equation-block">
       \[
-      \gamma^5 \psi_c = -\gamma^2 (-\psi)^* = +\psi_c.
+      \gamma^5 \psi_c = -\gamma^2 (-\psi)^* = +\psi_c
       \]
     </div>
 
-    <p>Hence</p>
-
-    <div class="equation-block">
-      \[
-      \psi_L \xrightarrow{c} (\psi_c)_R.
-      \]
-    </div>
-
-    <p>So charge conjugation flips chirality.</p>
+    <p>Hence charge conjugation flips chirality: a left-handed field goes to a right-handed charge conjugate.</p>
 
     <h2>5. Compare the equations</h2>
 
@@ -201,19 +170,15 @@
 
     <div class="equation-block">
       \[
-      i\slashed{\partial}\psi = m\psi.
+      i\gamma^\mu \partial_\mu \psi = m\psi
       \]
     </div>
 
     <p>Split into chiral parts:</p>
 
-    <p>
-      the left-hand side flips chirality, while the right-hand side does not. So one gets
-    </p>
-
     <div class="equation-block">
       \[
-      i\slashed{\partial}\psi_L = m\psi_R.
+      i\gamma^\mu \partial_\mu \psi_L = m\psi_R
       \]
     </div>
 
@@ -223,58 +188,33 @@
 
     <div class="equation-block">
       \[
-      i\slashed{\partial}\psi = m\psi_c.
+      i\gamma^\mu \partial_\mu \psi = m\psi_c
       \]
     </div>
 
     <p>Now start with a left-handed field \(\psi_L\):</p>
 
-    <p>
-      the left-hand side, \(i\slashed{\partial}\psi_L\), is right-handed, and the right-hand side,
-      \(m\psi_c = m(\psi_L)_c\), is also right-handed.
-    </p>
+    <p>The left-hand side, \(i\gamma^\mu \partial_\mu \psi_L\), is right-handed, and the right-hand side, \(m(\psi_L)_c\), is also right-handed.</p>
 
-    <p>So the equation becomes</p>
-
-    <div class="equation-block">
-      \[
-      \text{right-handed} = \text{right-handed}.
-      \]
-    </div>
+    <p>So the equation matches right-handed to right-handed.</p>
 
     <h2>6. The key conclusion</h2>
 
-    <p>
-      The equation is closed within one chiral sector.
-      You can write the entire dynamics using only \(\psi_L\): the “other chirality” is not independent;
-      it is generated automatically via \(\psi_c\).
-    </p>
+    <p>The equation is closed within one chiral sector. You can write the entire dynamics using only \(\psi_L\): the opposite chirality is not an independent field, because it is generated automatically by charge conjugation.</p>
 
-    <h2>7. What “preserves handedness” really means</h2>
+    <h2>7. What "preserves handedness" really means</h2>
 
-    <p>
-      It does not mean chirality never flips. Rather, it means that the theory does not require an independent
-      field of opposite chirality.
-    </p>
+    <p>It does not mean chirality never flips. Rather, it means that the theory does not require an independent field of opposite chirality.</p>
 
-    <p>
-      Dirac: needs \(\psi_L\) and \(\psi_R\).<br />
-      Majorana: needs only \(\psi_L\), because \(\psi_R\sim (\psi_L)_c\).
-    </p>
+    <p>Dirac: needs \(\psi_L\) and \(\psi_R\).<br />Majorana: needs only \(\psi_L\), because the role of the opposite chirality is supplied by \((\psi_L)_c\).</p>
 
     <h2>8. One-line intuition</h2>
 
-    <p>
-      \(\gamma^\mu\) flips chirality, charge conjugation flips chirality, and in the Majorana equation these
-      flips match perfectly. So everything stays self-contained within one Weyl field.
-    </p>
+    <p>\(\gamma^\mu\) flips chirality, charge conjugation flips chirality, and in the Majorana equation these flips match perfectly. So everything stays self-contained within one Weyl field.</p>
 
     <h2>9. Final perspective</h2>
 
-    <p class="conclusion">
-      This is why Majorana fermions can be described by a single Weyl spinor, and why the mass term is consistent
-      without introducing new degrees of freedom.
-    </p>
+    <p>This is why Majorana fermions can be described by a single Weyl spinor, and why the mass term is consistent without introducing new degrees of freedom.</p>
   </div>
 </body>
 </html>
