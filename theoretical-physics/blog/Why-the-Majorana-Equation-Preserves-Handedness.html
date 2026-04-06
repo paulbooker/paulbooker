@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://www.paulbooker.co.uk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@97.8,200..700&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why the Majorana Equation Preserves Handedness</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)'], ['$', '$']],
+        displayMath: [['\\[','\\]'], ['$$','$$']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="page">
+    <h1>Why the Majorana Equation Preserves Handedness</h1>
+
+    <p class="lead">
+      We want to understand why the equation
+    </p>
+
+    <div class="equation-block">
+      \[
+      i\slashed{\partial}\psi = m\,\psi_c
+      \]
+    </div>
+
+    <p>
+      does not mix independent left- and right-handed fields, unlike the Dirac equation.
+    </p>
+
+    <h2>1. Chirality and projectors</h2>
+
+    <p>Define</p>
+
+    <div class="equation-block">
+      \[
+      \psi_L = \frac{1-\gamma^5}{2}\psi, \qquad
+      \psi_R = \frac{1+\gamma^5}{2}\psi
+      \]
+    </div>
+
+    <p>with</p>
+
+    <div class="equation-block">
+      \[
+      \gamma^5 \psi_L = -\psi_L, \qquad
+      \gamma^5 \psi_R = +\psi_R.
+      \]
+    </div>
+
+    <h2>2. The key structural fact</h2>
+
+    <p>The gamma matrices satisfy</p>
+
+    <div class="equation-block">
+      \[
+      \{\gamma^5, \gamma^\mu\} = 0.
+      \]
+    </div>
+
+    <p>This immediately implies that \(\gamma^\mu\) flips chirality.</p>
+
+    <h2>3. The derivative term flips chirality</h2>
+
+    <p>Consider</p>
+
+    <div class="equation-block">
+      \[
+      i\slashed{\partial}\psi_L = i\gamma^\mu \partial_\mu \psi_L.
+      \]
+    </div>
+
+    <p>Act with \(\gamma^5\):</p>
+
+    <div class="equation-block">
+      \[
+      \gamma^5 (i\gamma^\mu \partial_\mu \psi_L)
+      = i(-\gamma^\mu \gamma^5)\partial_\mu \psi_L
+      = i(-\gamma^\mu)(-\partial_\mu \psi_L)
+      = i\gamma^\mu \partial_\mu \psi_L.
+      \]
+    </div>
+
+    <p>So</p>
+
+    <div class="equation-block">
+      \[
+      \gamma^5 (i\slashed{\partial}\psi_L)
+      = +\, i\slashed{\partial}\psi_L.
+      \]
+    </div>
+
+    <p>Therefore, \(i\slashed{\partial}\psi_L\) is right-handed.</p>
+
+    <h2>4. Charge conjugation flips chirality</h2>
+
+    <p>You are using</p>
+
+    <div class="equation-block">
+      \[
+      \psi_c = \gamma^2 \psi^*.
+      \]
+    </div>
+
+    <p>A crucial identity is</p>
+
+    <div class="equation-block">
+      \[
+      \gamma^2 (\gamma^5)^* = -\gamma^5 \gamma^2.
+      \]
+    </div>
+
+    <p>Now compute</p>
+
+    <div class="equation-block">
+      \[
+      \gamma^5 \psi_c
+      = \gamma^5 \gamma^2 \psi^*
+      = -\gamma^2 (\gamma^5 \psi)^*.
+      \]
+    </div>
+
+    <p>
+      If \(\psi = \psi_L\), then \(\gamma^5 \psi = -\psi\), so
+    </p>
+
+    <div class="equation-block">
+      \[
+      \gamma^5 \psi_c = -\gamma^2 (-\psi)^* = +\psi_c.
+      \]
+    </div>
+
+    <p>Hence</p>
+
+    <div class="equation-block">
+      \[
+      \psi_L \xrightarrow{c} (\psi_c)_R.
+      \]
+    </div>
+
+    <p>So charge conjugation flips chirality.</p>
+
+    <h2>5. Compare the equations</h2>
+
+    <p><strong>(a) Dirac equation</strong></p>
+
+    <div class="equation-block">
+      \[
+      i\slashed{\partial}\psi = m\psi.
+      \]
+    </div>
+
+    <p>Split into chiral parts:</p>
+
+    <p>
+      the left-hand side flips chirality, while the right-hand side does not. So one gets
+    </p>
+
+    <div class="equation-block">
+      \[
+      i\slashed{\partial}\psi_L = m\psi_R.
+      \]
+    </div>
+
+    <p>This requires both \(\psi_L\) and \(\psi_R\). A Dirac mass therefore mixes handedness.</p>
+
+    <p><strong>(b) Majorana equation</strong></p>
+
+    <div class="equation-block">
+      \[
+      i\slashed{\partial}\psi = m\psi_c.
+      \]
+    </div>
+
+    <p>Now start with a left-handed field \(\psi_L\):</p>
+
+    <p>
+      the left-hand side, \(i\slashed{\partial}\psi_L\), is right-handed, and the right-hand side,
+      \(m\psi_c = m(\psi_L)_c\), is also right-handed.
+    </p>
+
+    <p>So the equation becomes</p>
+
+    <div class="equation-block">
+      \[
+      \text{right-handed} = \text{right-handed}.
+      \]
+    </div>
+
+    <h2>6. The key conclusion</h2>
+
+    <p>
+      The equation is closed within one chiral sector.
+      You can write the entire dynamics using only \(\psi_L\): the “other chirality” is not independent;
+      it is generated automatically via \(\psi_c\).
+    </p>
+
+    <h2>7. What “preserves handedness” really means</h2>
+
+    <p>
+      It does not mean chirality never flips. Rather, it means that the theory does not require an independent
+      field of opposite chirality.
+    </p>
+
+    <p>
+      Dirac: needs \(\psi_L\) and \(\psi_R\).<br />
+      Majorana: needs only \(\psi_L\), because \(\psi_R\sim (\psi_L)_c\).
+    </p>
+
+    <h2>8. One-line intuition</h2>
+
+    <p>
+      \(\gamma^\mu\) flips chirality, charge conjugation flips chirality, and in the Majorana equation these
+      flips match perfectly. So everything stays self-contained within one Weyl field.
+    </p>
+
+    <h2>9. Final perspective</h2>
+
+    <p class="conclusion">
+      This is why Majorana fermions can be described by a single Weyl spinor, and why the mass term is consistent
+      without introducing new degrees of freedom.
+    </p>
+
+    <p>This is additional material to complement page 486 of Group Theory in a Nutshell by Anthony Zee.</p>
+    <p>Created with assistance from ChatGPT.</p>
+  </div>
+</body>
+</html>
