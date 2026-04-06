@@ -9,12 +9,8 @@
       loader: { load: ['[tex]/physics'] },
       tex: {
         packages: { '[+]': ['physics'] },
-        inlineMath: [['\\(','\\)']],
-        displayMath: [['\\[','\\]']],
-        processEscapes: true,
-        macros: {
-          pslash: ['\\slashed{\\partial}']
-        }
+        inlineMath: [['\(','\)'], ['$', '$']],
+        displayMath: [['\[','\]'], ['$$','$$']]
       },
       options: {
         skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
@@ -62,6 +58,11 @@
       margin-top: 1.25em;
       padding-top: 0.25em;
     }
+    hr {
+      border: 0;
+      border-top: 1px solid #d9d9d9;
+      margin: 2em 0;
+    }
   </style>
 </head>
 <body>
@@ -74,7 +75,7 @@
 
     <div class="equation-block">
       \[
-      i\pslash\psi = m\,\psi_c
+      i\slashed{\partial}\psi = m\,\psi_c
       \]
     </div>
 
@@ -120,7 +121,7 @@
 
     <div class="equation-block">
       \[
-      i\pslash\psi_L = i\gamma^\mu \partial_\mu \psi_L.
+      i\slashed{\partial}\psi_L = i\gamma^\mu \partial_\mu \psi_L.
       \]
     </div>
 
@@ -139,12 +140,12 @@
 
     <div class="equation-block">
       \[
-      \gamma^5 (i\pslash\psi_L)
-      = +\, i\pslash\psi_L.
+      \gamma^5 (i\slashed{\partial}\psi_L)
+      = +\, i\slashed{\partial}\psi_L.
       \]
     </div>
 
-    <p>Therefore, \(i\pslash\psi_L\) is right-handed.</p>
+    <p>Therefore, \(i\slashed{\partial}\psi_L\) is right-handed.</p>
 
     <h2>4. Charge conjugation flips chirality</h2>
 
@@ -200,7 +201,7 @@
 
     <div class="equation-block">
       \[
-      i\pslash\psi = m\psi.
+      i\slashed{\partial}\psi = m\psi.
       \]
     </div>
 
@@ -212,7 +213,7 @@
 
     <div class="equation-block">
       \[
-      i\pslash\psi_L = m\psi_R.
+      i\slashed{\partial}\psi_L = m\psi_R.
       \]
     </div>
 
@@ -222,14 +223,14 @@
 
     <div class="equation-block">
       \[
-      i\pslash\psi = m\psi_c.
+      i\slashed{\partial}\psi = m\psi_c.
       \]
     </div>
 
     <p>Now start with a left-handed field \(\psi_L\):</p>
 
     <p>
-      the left-hand side, \(i\pslash\psi_L\), is right-handed, and the right-hand side,
+      the left-hand side, \(i\slashed{\partial}\psi_L\), is right-handed, and the right-hand side,
       \(m\psi_c = m(\psi_L)_c\), is also right-handed.
     </p>
 
