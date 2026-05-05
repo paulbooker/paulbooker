@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url>
-		<loc>https://www.paulbooker.co.uk</loc>
-		<lastmod>2026-04-13</lastmod>
-	</url>
-	<url>
-		<loc>https://www.paulbooker.co.uk/theoretical-physics</loc>
-		<lastmod>2026-04-13</lastmod>
-	</url>
-	<url>
-		<loc>https://www.paulbooker.co.uk/theoretical-physics/blog</loc>
-		<lastmod>2026-04-13</lastmod>
-	</url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.paulbooker.co.uk/</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Derivation-of-an-object-that-transforms-as-a-rank-3-antisymmetric-tensor-of-SO(10).html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Spinor-Decomposition-of-16+-x-16+-in-SO(10).html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Lorentz-Tensors-Restricted-to-the-Rotation-Subgroup.html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Why-a-Unitary-L-Gives-a-Rotation.html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Lorentz-Representation-Restriction-to-SO(3).html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Rotational-Properties-of-Weyl-Spinors.html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Derivation-of-Gamma5-in-the-Weyl-Basis.html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/How-(1,0)-and-(0,1)-Give-the-Adjoint-Representation.html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.paulbooker.co.uk/theoretical-physics/blog/Why-the-Majorana-Equation-Preserves-Handedness.html</loc>
+  <lastmod>2026-05-05T20:35:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
