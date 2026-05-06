@@ -11,31 +11,31 @@ body {
 		color: #03DAC6;
 	}
     
-    	nav {
-      		background-color: #333;
-    	}
+	nav {
+  		background-color: #333;
+	}
 
-    	nav ul {
-      		list-style: none;
-      		margin: 0;
-      		padding: 0;
-      		display: flex;
-    	}
+	nav ul {
+  		list-style: none;
+  		margin: 0;
+  		padding: 0;
+  		display: flex;
+	}
 
-    	nav li {
-      		margin: 0;
-    	}
+	nav li {
+  		margin: 0;
+	}
 
-    	nav a {
-      		display: block;
-      		padding: 14px 20px;
-      		color: white;
-      		text-decoration: none;
-   	}
+	nav a {
+  		display: block;
+  		padding: 14px 20px;
+  		color: white;
+  		text-decoration: none;
+	}
 
-    	nav a:hover {
-      		background-color: #555;
-    	}
+	nav a:hover {
+  		background-color: #555;
+	}
 
 
   /* theoretical physics blog */
