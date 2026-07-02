@@ -1,6 +1,6 @@
 body {
-	font-family: "Mozilla Headline", sans-serif; font-size: 50px; margin:80px; /* font-family: 'Gotu', sans-serif;  */
-  color: #eee;
+	font-family: "Mozilla Headline", sans-serif; font-size: 50px; margin:80px; 
+  	color: #eee;
 	background: #121212;
  	
 	a { 
@@ -13,10 +13,6 @@ body {
 		border-style: dashed;	
 	}
 
-	.blog {
-		color: #03DAC6;
-	}
-    
 	nav {
   		background-color: #333;
 	}
@@ -42,18 +38,4 @@ body {
 	nav a:hover {
   		background-color: #555;
 	}
-
-
-  /* theoretical physics blog */
-  	.mathblock {
-      		overflow-x: auto;
-      		margin: 0.9rem 0;
-  }
-
-  	.note {
-    		border-left: 4px solid #C0C0C0;
-    		padding: 12px 14px;
-    		margin: 1em 0;
-  	}
-
 }
