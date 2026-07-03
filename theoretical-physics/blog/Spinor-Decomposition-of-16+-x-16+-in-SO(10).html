@@ -21,16 +21,16 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/theoretical-physics">Theoretical Physics</a></li>
-      <li><a href="/theoretical-physics/blog">Blog</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/theoretical-physics">Theoretical Physics</a></li>
+    <li><a href="/theoretical-physics/blog">Blog</a></li>
+  </ul>
+</nav>
 
 <body>
-  <div class="container">
+  <div>
     <h1>Spinor Decomposition of \((16^+)\otimes(16^+)\) in SO(10)</h1>
     <p class="subtitle">Five explanations on \((16^+)\otimes(16^+)\), antisymmetric tensors, self-duality, and differential forms.</p>
 
@@ -38,49 +38,49 @@
       <h2>1. Decomposition of \((16^+)\otimes(16^+)\)</h2>
       <p>The idea is that the tensor product of two chiral spinors can be expanded in a basis built from antisymmetrized products of gamma matrices, and the chirality projectors tell you which ranks survive.</p>
       <p>For \(SO(10)\), we have \(2n=10\), so \(n=5\). The Dirac spinor has dimension \(2^5=32\), and it splits into two Weyl spinors</p>
-      <div class="math-block">\[
+      <div>\[
       32 = 16^+ \oplus 16^-.
       \]</div>
       <p>We want to understand</p>
-      <div class="math-block">\[
+      <div>\[
       16^+ \otimes 16^+.
       \]</div>
 
       <h3>1.1 Start from the gamma-matrix expansion</h3>
       <p>Given two spinors, a general bilinear can be written using</p>
-      <div class="math-block">\[
+      <div>\[
       C\Gamma_{[k]},
       \]</div>
       <p>where \(\Gamma_{[k]}\) means the antisymmetrized product of \(k\) gamma matrices:</p>
-      <div class="math-block">\[
+      <div>\[
       \Gamma_{[k]}=\Gamma_{i_1i_2\cdots i_k}
       \equiv \Gamma_{[i_1}\Gamma_{i_2}\cdots \Gamma_{i_k]}.
       \]</div>
       <p>So the tensor product of two spinors decomposes into antisymmetric tensor representations \([k]\), where \([k]\) denotes the rank-\(k\) antisymmetric tensor of \(SO(10)\).</p>
       <p>In \(10\) dimensions, these have dimensions</p>
-      <div class="math-block">\[
+      <div>\[
       [0]:1,\quad [1]:10,\quad [2]:45,\quad [3]:120,\quad [4]:210,\quad [5]:252.
       \]</div>
 
       <h3>1.2 Use chirality</h3>
       <p>Let</p>
-      <div class="math-block">\[
+      <div>\[
       P_\pm=\frac12(1\pm \Gamma_F),
       \]</div>
       <p>with \(\Gamma_F\) the chirality matrix. For a positive-chirality spinor,</p>
-      <div class="math-block">\[
+      <div>\[
       \psi_R=P_+\psi.
       \]</div>
       <p>Now consider the bilinear</p>
-      <div class="math-block">\[
+      <div>\[
       \psi^T P_+\, C\, \Gamma_{[k]}\, P_+ \psi.
       \]</div>
       <p>For \(n\) odd one has</p>
-      <div class="math-block">\[
+      <div>\[
       P_+ C = C P_-.
       \]</div>
       <p>Also, \(\Gamma_F\) anticommutes with each gamma matrix, so with a product of \(k\) gamma matrices it gives</p>
-      <div class="math-block">\[
+      <div>\[
       \Gamma_F \Gamma_{[k]} = (-1)^k \Gamma_{[k]} \Gamma_F.
       \]</div>
       <p>That means:</p>
@@ -89,7 +89,7 @@
         <li>if \(k\) is <strong>even</strong>, \(\Gamma_{[k]}\) preserves chirality, so \(\Gamma_{[k]} P_+ = P_+ \Gamma_{[k]}\).</li>
       </ul>
       <p>Therefore:</p>
-      <div class="math-block">\[
+      <div>\[
       \psi^T P_+ C\Gamma_{[k]}P_+\psi
       =
       \psi^T C P_- \Gamma_{[k]} P_+\psi.
@@ -100,66 +100,66 @@
         <li>for \(k\) even, \(P_- \Gamma_{[k]} = \Gamma_{[k]} P_-\), so one gets \(P_-P_+=0\).</li>
       </ul>
       <p>So for \(n=5\) odd, <strong>only odd \(k\)</strong> survive in</p>
-      <div class="math-block">\[
+      <div>\[
       16^+\otimes16^+.
       \]</div>
       <p>Thus at first sight,</p>
-      <div class="math-block">\[
+      <div>\[
       16^+\otimes16^+ = [1]\oplus [3]\oplus [5].
       \]</div>
 
       <h3>1.3 Dimensions of the surviving pieces</h3>
       <p>For \(SO(10)\),</p>
-      <div class="math-block">\[
+      <div>\[
       \dim [1] = \binom{10}{1}=10,
       \]</div>
-      <div class="math-block">\[
+      <div>\[
       \dim [3] = \binom{10}{3}=120,
       \]</div>
-      <div class="math-block">\[
+      <div>\[
       \dim [5] = \binom{10}{5}=252.
       \]</div>
       <p>But</p>
-      <div class="math-block">\[
+      <div>\[
       16^+\otimes16^+
       \]</div>
       <p>has dimension</p>
-      <div class="math-block">\[
+      <div>\[
       16\times 16=256.
       \]</div>
       <p>If we added the full \([5]\), we would get</p>
-      <div class="math-block">\[
+      <div>\[
       10+120+252=382,
       \]</div>
       <p>which is too large. So something still has to happen to \([5]\).</p>
 
       <h3>1.4 The rank-5 tensor splits into self-dual and anti-self-dual parts</h3>
       <p>In \(10=2n\) dimensions, an \(n\)-form can be Hodge dualized into another \(n\)-form. So a 5-form in ten dimensions splits into two irreducible pieces:</p>
-      <div class="math-block">\[
+      <div>\[
       [5] = [5]_+ \oplus [5]_-,
       \]</div>
       <p>each of dimension</p>
-      <div class="math-block">\[
+      <div>\[
       \frac{252}{2}=126.
       \]</div>
       <p>These are the self-dual and anti-self-dual 5-forms.</p>
       <p>For two spinors of the <strong>same chirality</strong>, only one of these two halves appears. Hence the actual decomposition is</p>
-      <div class="math-block">\[
+      <div>\[
       16^+\otimes16^+ = [1]\oplus[3]\oplus[5]_+,
       \]</div>
       <p>or, in dimensions,</p>
-      <div class="math-block">\[
+      <div>\[
       16^+\otimes16^+ = 10\oplus 120\oplus 126.
       \]</div>
 
       <h3>1.5 Dimension check</h3>
-      <div class="math-block">\[
+      <div>\[
       10+120+126=256=16\times16.
       \]</div>
 
       <h3>1.6 Why the 5-form is only half of the full 252</h3>
       <p>For \(k=n=5\), the gamma-matrix identity involving the chirality matrix relates \(\Gamma_{[5]}\) to its Hodge dual. Schematically,</p>
-      <div class="math-block">\[
+      <div>\[
       \Gamma_{i_1\cdots i_5}
       \sim
       \epsilon_{i_1\cdots i_5 j_1\cdots j_5}\,
@@ -167,7 +167,7 @@
       \]</div>
       <p>When this acts on a spinor of definite chirality, \(\Gamma_F=\pm 1\), so the 5-form piece automatically satisfies a self-duality or anti-self-duality condition. Thus only one \(126\) survives.</p>
 
-      <div class="summary">
+      <div>
         <strong>Final decomposition:</strong>
         \[
         16^+ \otimes 16^+ = 10\oplus120\oplus126.
@@ -179,21 +179,21 @@
       <h2>2. How to Calculate the Number \(120\)</h2>
       <p>The \(120\) comes from the dimension of the rank-3 antisymmetric tensor representation of \(SO(10)\).</p>
       <p>A rank-3 antisymmetric tensor has components</p>
-      <div class="math-block">\[
+      <div>\[
       T_{[abc]},
       \qquad a,b,c=1,\dots,10,
       \]</div>
       <p>with complete antisymmetry:</p>
-      <div class="math-block">\[
+      <div>\[
       T_{abc}=-T_{bac}=-T_{acb}, \quad \text{etc.}
       \]</div>
       <p>Because of antisymmetry, the only independent components are those with <strong>three distinct indices</strong>, and each unordered choice of 3 indices gives exactly one independent component.</p>
       <p>So the number of independent components is just the number of ways of choosing 3 distinct indices from 10:</p>
-      <div class="math-block">\[
+      <div>\[
       \dim[3]=\binom{10}{3}.
       \]</div>
       <p>Now compute it:</p>
-      <div class="math-block">\[
+      <div>\[
       \binom{10}{3}
       =
       \frac{10!}{3!\,7!}
@@ -205,27 +205,27 @@
       120.
       \]</div>
       <p>So</p>
-      <div class="math-block">\[
+      <div>\[
       \boxed{\dim[3]=120.}
       \]</div>
       <p>That is why the \([3]\) piece in</p>
-      <div class="math-block">\[
+      <div>\[
       16^+\otimes16^+= [1]\oplus[3]\oplus[5]_+
       \]</div>
       <p>has dimension \(120\).</p>
       <p>For comparison:</p>
-      <div class="math-block">\[
+      <div>\[
       \dim[1]=\binom{10}{1}=10,
       \]</div>
-      <div class="math-block">\[
+      <div>\[
       \dim[5]=\binom{10}{5}=252,
       \]</div>
       <p>and then the self-dual half gives</p>
-      <div class="math-block">\[
+      <div>\[
       252/2=126.
       \]</div>
       <p>So the full count is</p>
-      <div class="math-block">\[
+      <div>\[
       10+120+126=256=16\times16.
       \]</div>
     </section>
@@ -236,19 +236,19 @@
 
       <h3>3.1 What is a rank-5 antisymmetric tensor?</h3>
       <p>In \(10\) dimensions, a rank-5 antisymmetric tensor is</p>
-      <div class="math-block">\[
+      <div>\[
       T_{i_1 i_2 i_3 i_4 i_5},
       \]</div>
       <p>totally antisymmetric in its indices.</p>
       <p>The number of independent components is</p>
-      <div class="math-block">\[
+      <div>\[
       \binom{10}{5}=252.
       \]</div>
 
       <h3>3.2 The Hodge dual</h3>
       <p>In even dimensions, there is a natural operation called the <strong>Hodge dual</strong>.</p>
       <p>It maps a \(k\)-form into a \((10-k)\)-form using the Levi-Civita tensor:</p>
-      <div class="math-block">\[
+      <div>\[
       (*T)_{j_1\cdots j_{10-k}}
       =
       \frac{1}{k!}\,
@@ -258,52 +258,52 @@
 
       <h3>3.3 Special feature when \(k=5\)</h3>
       <p>In \(10\) dimensions, if \(k=5\), then \(10-k=5\). So the Hodge dual maps</p>
-      <div class="math-block">\[
+      <div>\[
       \boxed{5\text{-form} \;\longrightarrow\; 5\text{-form}}
       \]</div>
       <p>That means the duality operation acts <strong>within the same space</strong>.</p>
 
       <h3>3.4 Applying the dual twice</h3>
       <p>If you apply the Hodge dual twice, you get (in Euclidean signature)</p>
-      <div class="math-block">\[
+      <div>\[
       *(*T) = T.
       \]</div>
       <p>So the dual operator satisfies</p>
-      <div class="math-block">\[
+      <div>\[
       *^2 = 1.
       \]</div>
       <p>This is exactly like an operator with eigenvalues</p>
-      <div class="math-block">\[
+      <div>\[
       \boxed{+1 \quad \text{or} \quad -1.}
       \]</div>
 
       <h3>3.5 Eigenvectors of the dual: self-dual vs anti-self-dual</h3>
       <p>Since \(*^2 = 1\), we can decompose any 5-form into eigenvectors of \(*\):</p>
       <p><strong>Self-dual part</strong></p>
-      <div class="math-block">\[
+      <div>\[
       *T = +T
       \]</div>
       <p><strong>Anti-self-dual part</strong></p>
-      <div class="math-block">\[
+      <div>\[
       *T = -T
       \]</div>
       <p>Every tensor splits uniquely as</p>
-      <div class="math-block">\[
+      <div>\[
       T = T_+ + T_-,
       \]</div>
       <p>where</p>
-      <div class="math-block">\[
+      <div>\[
       T_\pm = \frac{1}{2}(T \pm *T).
       \]</div>
 
       <h3>3.6 Why the dimension halves</h3>
       <p>The Hodge dual is a linear operator acting on a 252-dimensional space, with eigenvalues \(+1\) and \(-1\).</p>
       <p>Because it has equal numbers of \(+1\) and \(-1\) eigenvalues, the space splits evenly:</p>
-      <div class="math-block">\[
+      <div>\[
       252 = 126 + 126.
       \]</div>
       <p>So:</p>
-      <div class="math-block">\[
+      <div>\[
       \boxed{[5] = [5]_+ \oplus [5]_- = 126 \oplus 126}
       \]</div>
 
@@ -312,11 +312,11 @@
 
       <h3>3.8 Why only one \(126\) appears in \(16^+ \otimes 16^+\)</h3>
       <p>There is a key identity:</p>
-      <div class="math-block">\[
+      <div>\[
       \Gamma_{[5]} \sim \epsilon \,\Gamma_{[5]} \Gamma_F.
       \]</div>
       <p>When acting on a chiral spinor,</p>
-      <div class="math-block">\[
+      <div>\[
       \Gamma_F = \pm 1,
       \]</div>
       <p>so this becomes a self-duality condition on the tensor constructed from the spinors. Thus:</p>
@@ -339,11 +339,11 @@
 
       <h3>4.1 Basic definition</h3>
       <p>A \(k\)-form \(\omega\) in \(n\) dimensions has components</p>
-      <div class="math-block">\[
+      <div>\[
       \omega_{i_1 i_2 \cdots i_k}
       \]</div>
       <p>that are <strong>totally antisymmetric</strong>:</p>
-      <div class="math-block">\[
+      <div>\[
       \omega_{i_1 i_2 \cdots i_k}
       =
       -\omega_{i_2 i_1 \cdots i_k}
@@ -353,44 +353,44 @@
 
       <h3>4.2 Simple examples</h3>
       <p><strong>0-form</strong>: just a scalar function</p>
-      <div class="math-block">\[
+      <div>\[
       \phi(x)
       \]</div>
       <p><strong>1-form</strong>: like a covector</p>
-      <div class="math-block">\[
+      <div>\[
       A_i
       \]</div>
       <p>written as</p>
-      <div class="math-block">\[
+      <div>\[
       A = A_i\, dx^i
       \]</div>
       <p><strong>2-form</strong>:</p>
-      <div class="math-block">\[
+      <div>\[
       B_{ij} = -B_{ji}
       \]</div>
       <p>written as</p>
-      <div class="math-block">\[
+      <div>\[
       B = \tfrac{1}{2} B_{ij}\, dx^i \wedge dx^j
       \]</div>
       <p><strong>General \(k\)-form</strong>:</p>
-      <div class="math-block">\[
+      <div >\[
       \omega = \frac{1}{k!}\,\omega_{i_1 \cdots i_k}\,
       dx^{i_1} \wedge \cdots \wedge dx^{i_k}
       \]</div>
 
       <h3>4.3 The wedge product</h3>
       <p>The symbol \(\wedge\) means antisymmetric product. For example,</p>
-      <div class="math-block">\[
+      <div>\[
       dx^i \wedge dx^j = - dx^j \wedge dx^i
       \]</div>
       <p>so automatically</p>
-      <div class="math-block">\[
+      <div>\[
       dx^i \wedge dx^i = 0.
       \]</div>
 
       <h3>4.4 Counting components</h3>
       <p>Because of antisymmetry, the number of independent components is</p>
-      <div class="math-block">\[
+      <div>\[
       \boxed{\binom{n}{k}}.
       \]</div>
       <p>Example in 10D:</p>
@@ -426,20 +426,20 @@
 
       <h3>4.7 Connection to the \(SO(10)\) problem</h3>
       <p>When we write</p>
-      <div class="math-block">\[
+      <div>\[
       [3],\; [5]
       \]</div>
       <p>these are exactly the 3-form and 5-form representations. So</p>
-      <div class="math-block">\[
+      <div>\[
       \Gamma_{[k]} \leftrightarrow \text{\(k\)-form structure}.
       \]</div>
       <p>That is why the decomposition</p>
-      <div class="math-block">\[
+      <div>\[
       16^+ \otimes 16^+ = [1]\oplus[3]\oplus[5]_+
       \]</div>
       <p>is really saying: vector (1-form), 3-form, self-dual 5-form.</p>
 
-      <div class="summary">
+      <div>
         <strong>One-line summary:</strong>
         \[
         \boxed{\text{A \(k\)-form is a totally antisymmetric rank-\(k\) tensor that lives naturally on \(k\)-dimensional geometry.}}
@@ -453,7 +453,7 @@
 
       <h3>5.1 2-form in \(n\) dimensions</h3>
       <p>A 2-form is</p>
-      <div class="math-block">\[
+      <div>\[
       B_{ij} = -B_{ji}.
       \]</div>
       <p><strong>Step 1:</strong> Start with all components. There are \(n^2\) components \(B_{ij}\).</p>
@@ -464,26 +464,26 @@
       </ul>
       <p>So each pair \((i,j)\) with \(i\neq j\) gives only <strong>one independent component</strong>.</p>
       <p><strong>Step 3:</strong> Count independent pairs. We only count combinations with</p>
-      <div class="math-block">\[
+      <div>\[
       i < j.
       \]</div>
       <p>Number of such pairs:</p>
-      <div class="math-block">\[
+      <div>\[
       \binom{n}{2} = \frac{n(n-1)}{2}.
       \]</div>
       <p><strong>Example: \(n=4\)</strong></p>
       <p>Independent components:</p>
-      <div class="math-block">\[
+      <div>\[
       B_{12},\; B_{13},\; B_{14},\; B_{23},\; B_{24},\; B_{34}
       \]</div>
       <p>Total:</p>
-      <div class="math-block">\[
+      <div>\[
       \boxed{6 = \binom{4}{2}}.
       \]</div>
 
       <h3>5.2 3-form in \(n\) dimensions</h3>
       <p>A 3-form is:</p>
-      <div class="math-block">\[
+      <div>\[
       C_{ijk} = \text{totally antisymmetric}.
       \]</div>
       <p><strong>Step 1:</strong> Antisymmetry rules.</p>
@@ -493,21 +493,21 @@
       </ul>
       <p>So only triples with <strong>all indices distinct</strong> survive.</p>
       <p><strong>Step 2:</strong> Count independent triples. We only count ordered sets</p>
-      <div class="math-block">\[
+      <div>\[
       i < j < k.
       \]</div>
       <p>Each such triple corresponds to exactly one independent component.</p>
       <p>Number of choices:</p>
-      <div class="math-block">\[
+      <div>\[
       \binom{n}{3} = \frac{n(n-1)(n-2)}{6}.
       \]</div>
       <p><strong>Example: \(n=4\)</strong></p>
       <p>Independent components:</p>
-      <div class="math-block">\[
+      <div>\[
       C_{123},\; C_{124},\; C_{134},\; C_{234}
       \]</div>
       <p>Total:</p>
-      <div class="math-block">\[
+      <div>\[
       \boxed{4 = \binom{4}{3}}.
       \]</div>
 
@@ -529,18 +529,18 @@
 
       <h3>5.5 Connection to the \(SO(10)\) case</h3>
       <p>Now you can immediately see:</p>
-      <div class="math-block">\[
+      <div>\[
       \binom{10}{2} = 45,
       \qquad
       \binom{10}{3} = 120,
       \]</div>
       <p>which is exactly where the \(120\) in</p>
-      <div class="math-block">\[
+      <div>\[
       16^+ \otimes 16^+ = 10 \oplus 120 \oplus 126
       \]</div>
       <p>comes from.</p>
 
-      <div class="summary">
+      <div>
         <strong>Summary:</strong> a 2-form counts pairs i &lt; j, a 3-form counts triples i &lt; j &lt; k, and antisymmetry removes redundancy while killing repeated indices.
       </div>
     </section>
