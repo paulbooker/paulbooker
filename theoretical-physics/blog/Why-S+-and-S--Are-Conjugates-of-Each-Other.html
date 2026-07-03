@@ -21,13 +21,13 @@
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/theoretical-physics">Theoretical Physics</a></li>
-      <li><a href="/theoretical-physics/blog">Blog</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/theoretical-physics">Theoretical Physics</a></li>
+    <li><a href="/theoretical-physics/blog">Blog</a></li>
+  </ul>
+</nav>
 
 <body>
   <h1>Why \(S^+\) and \(S^-\) Are Conjugates of Each Other</h1>
@@ -45,7 +45,7 @@
     \(C\) such that for every group element \(g\),
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} R^*(g) C = R'(g).
     \]
@@ -61,7 +61,7 @@
     For the two chiral spinor representations, the representation matrices are
   </p>
 
-  <div class="block">
+  <div>
     \[
       R_\pm = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} P_\pm,
     \]
@@ -71,7 +71,7 @@
     where the chirality projectors are
   </p>
 
-  <div class="block">
+  <div>
     \[
       P_\pm = \frac{1}{2}(1 \pm \gamma_F).
     \]
@@ -87,7 +87,7 @@
     Taking the complex conjugate gives
   </p>
 
-  <div class="block">
+  <div>
     \[
       R_\pm^* = e^{-\frac{i}{4}\omega_{ij}\sigma_{ij}^*} P_\pm^*.
     \]
@@ -103,7 +103,7 @@
     The needed identities are:
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} \sigma_{ij}^* C = -\sigma_{ij}
     \]
@@ -124,7 +124,7 @@
     Since
   </p>
 
-  <div class="block">
+  <div>
     \[
       P_\pm = \frac{1}{2}(1 \pm \gamma_F),
     \]
@@ -134,7 +134,7 @@
     we obtain
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} P_\pm^* C
       = \frac{1}{2}\bigl(1 \pm (-1)^n \gamma_F\bigr).
@@ -145,7 +145,7 @@
     Therefore:
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} P_\pm^* C =
       \begin{cases}
@@ -161,7 +161,7 @@
     Apply \(C^{-1}(\cdot)C\) to the complex conjugate representation:
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} R_\pm^* C
       = C^{-1} \left(e^{-\frac{i}{4}\omega_{ij}\sigma_{ij}^*} P_\pm^*\right) C.
@@ -172,7 +172,7 @@
     Using \(C^{-1}\sigma_{ij}^*C=-\sigma_{ij}\), the exponential becomes
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} e^{-\frac{i}{4}\omega_{ij}\sigma_{ij}^*} C
       = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}}.
@@ -183,7 +183,7 @@
     So we get
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} R_\pm^* C
       = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} \left(C^{-1} P_\pm^* C\right).
@@ -198,7 +198,7 @@
 
   <p><strong>If \(n\) is even</strong>, then \(C^{-1}P_\pm^*C=P_\pm\), so</p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} R_\pm^* C = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} P_\pm = R_\pm.
     \]
@@ -208,7 +208,7 @@
     Thus each chiral representation is equivalent to its own complex conjugate:
   </p>
 
-  <div class="block conclusion">
+  <div>
     \[
       (S^\pm)^* \cong S^\pm \qquad (n \text{ even}).
     \]
@@ -216,7 +216,7 @@
 
   <p><strong>If \(n\) is odd</strong>, then \(C^{-1}P_\pm^*C=P_\mp\), so</p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1} R_\pm^* C = e^{\frac{i}{4}\omega_{ij}\sigma_{ij}} P_\mp = R_\mp.
     \]
@@ -226,7 +226,7 @@
     Therefore the complex conjugate of one chiral spinor is the other:
   </p>
 
-  <div class="block conclusion">
+  <div>
     \[
       (S^+)^* \cong S^-, \qquad (S^-)^* \cong S^+ \qquad (n \text{ odd}).
     \]
@@ -238,7 +238,7 @@
     The crucial point is that complex conjugation acts on the chirality operator through
   </p>
 
-  <div class="block">
+  <div>
     \[
       C^{-1}\gamma_F C = (-1)^n \gamma_F.
     \]
@@ -248,7 +248,7 @@
     So:
   </p>
 
-  <div class="block note">
+  <div>
     <p>
       When \(n\) is even, chirality is preserved under conjugation, so \(S^+\) and \(S^-\) are each
       self-conjugate.
@@ -261,7 +261,7 @@
 
   <h2>9. Final summary</h2>
 
-  <div class="block conclusion">
+  <div>
     \[
       \boxed{
       \begin{aligned}
