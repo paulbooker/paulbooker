@@ -21,13 +21,13 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/theoretical-physics">Theoretical Physics</a></li>
-      <li><a href="/theoretical-physics/blog">Blog</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/theoretical-physics">Theoretical Physics</a></li>
+    <li><a href="/theoretical-physics/blog">Blog</a></li>
+  </ul>
+</nav>
 
 <body>
   <h1>Showing that for \(SO(3,1)\) the adjoint is the two-index antisymmetric tensor</h1>
@@ -42,7 +42,7 @@
     The group \(SO(3,1)\) is the set of linear transformations preserving the Minkowski metric
   </p>
 
-  <div class="mathblock">
+  <div>
     \[
       \eta = \mathrm{diag}(1,-1,-1,-1),
     \]
@@ -50,7 +50,7 @@
 
   <p>so its elements satisfy</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \Lambda^T \eta \Lambda = \eta.
     \]
@@ -60,7 +60,7 @@
     The Lie algebra \(so(3,1)\) consists of infinitesimal transformations. Write
   </p>
 
-  <div class="mathblock">
+  <div>
     \[
       \Lambda = I + \omega,
     \]
@@ -68,7 +68,7 @@
 
   <p>with \(\omega\) infinitesimal. Substituting into</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \Lambda^T \eta \Lambda = \eta
     \]
@@ -76,7 +76,7 @@
 
   <p>gives</p>
 
-  <div class="mathblock">
+  <div>
     \[
       (I+\omega)^T \eta (I+\omega)=\eta.
     \]
@@ -84,7 +84,7 @@
 
   <p>Keeping only first-order terms,</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \omega^T \eta + \eta \omega = 0.
     \]
@@ -92,7 +92,7 @@
 
   <p>In index notation this is</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \eta_{\mu\rho}\,\omega^\rho{}_{\nu}+\eta_{\nu\rho}\,\omega^\rho{}_{\mu}=0.
     \]
@@ -100,7 +100,7 @@
 
   <p>Now lower an index:</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \omega_{\mu\nu} \equiv \eta_{\mu\rho}\,\omega^\rho{}_{\nu}.
     \]
@@ -108,7 +108,7 @@
 
   <p>Then the condition becomes</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \omega_{\mu\nu} + \omega_{\nu\mu}=0,
     \]
@@ -116,7 +116,7 @@
 
   <p>so</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \omega_{\mu\nu} = -\omega_{\nu\mu}.
     \]
@@ -130,7 +130,7 @@
 
   <p>In 4 dimensions, an antisymmetric tensor \(A_{\mu\nu}\) has</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \binom{4}{2}=6
     \]
@@ -138,7 +138,7 @@
 
   <p>independent components. Also,</p>
 
-  <div class="mathblock">
+  <div>
     \[
       \dim so(3,1)=\frac{4(4-1)}{2}=6.
     \]
@@ -154,7 +154,7 @@
     The adjoint representation is the action of the group on its own Lie algebra:
   </p>
 
-  <div class="mathblock">
+  <div>
     \[
       X \mapsto \Lambda X \Lambda^{-1},
       \qquad X \in so(3,1).
@@ -165,7 +165,7 @@
     If we write \(X\) with lowered indices as \(X_{\mu\nu}=-X_{\nu\mu}\), then under a Lorentz transformation it becomes
   </p>
 
-  <div class="mathblock">
+  <div>
     \[
       X'_{\mu\nu}
       = \Lambda_\mu{}^\rho \, \Lambda_\nu{}^\sigma \, X_{\rho\sigma}.
@@ -176,7 +176,7 @@
     That is exactly how a rank-2 tensor transforms, and since antisymmetry is preserved,
   </p>
 
-  <div class="mathblock">
+  <div>
     \[
       X'_{\mu\nu} = -X'_{\nu\mu},
     \]
@@ -191,7 +191,7 @@
 
   <p>A standard basis for the Lie algebra is \(M_{\mu\nu}\), with</p>
 
-  <div class="mathblock">
+  <div>
     \[
       M_{\mu\nu}=-M_{\nu\mu},
     \]
@@ -199,7 +199,7 @@
 
   <p>so there are 6 generators:</p>
 
-  <div class="mathblock">
+  <div>
     \[
       M_{01},\, M_{02},\, M_{03},\, M_{12},\, M_{13},\, M_{23}.
     \]
@@ -207,7 +207,7 @@
 
   <p>Any Lie algebra element can be written as</p>
 
-  <div class="mathblock">
+  <div>
     \[
       X=\frac12 \, \omega^{\mu\nu} M_{\mu\nu},
       \qquad \omega^{\mu\nu}=-\omega^{\nu\mu}.
@@ -231,7 +231,7 @@
     So the antisymmetric tensor \(A_{\mu\nu}\) contains exactly the \(3+3\) degrees of freedom expected for the Lorentz algebra.
   </p>
 
-  <div class="note">
+  <div>
     The key idea is that preserving the Minkowski metric forces an infinitesimal Lorentz generator to be antisymmetric after lowering one index with \(\eta_{\mu\nu}\). That is why the Lie algebra, and hence the adjoint representation, is the antisymmetric two-index tensor representation.
   </div>
 
@@ -241,7 +241,7 @@
     For \(SO(3,1)\), the Lie algebra consists of matrices satisfying
   </p>
 
-  <div class="mathblock">
+  <div>
     \[
       X^T\eta+\eta X=0,
     \]
@@ -249,7 +249,7 @@
 
   <p>which is equivalent to saying</p>
 
-  <div class="mathblock">
+  <div>
     \[
       X_{\mu\nu}=-X_{\nu\mu}.
     \]
@@ -259,7 +259,7 @@
     So the Lie algebra is the space of antisymmetric rank-2 tensors, and since the adjoint representation is the group acting on its Lie algebra, the adjoint representation is the two-index antisymmetric tensor representation.
   </p>
 
-  <div class="mathblock conclusion">
+  <div>
     \[
       \boxed{\mathrm{Adj}(SO(3,1)) \cong \Lambda^2(\mathbb{R}^{3,1})}
     \]

@@ -21,22 +21,22 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/theoretical-physics">Theoretical Physics</a></li>
-      <li><a href="/theoretical-physics/blog">Blog</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/theoretical-physics">Theoretical Physics</a></li>
+    <li><a href="/theoretical-physics/blog">Blog</a></li>
+  </ul>
+</nav>
 
 <body>
-  <main class="page">
+  <main>
     <h1>Lorentz Tensors Restricted to the Rotation Subgroup</h1>
 
     <h2>1. The starting point: restricting Lorentz to rotations</h2>
     <p>We begin with representations of the Lorentz group \(SO(1,3)\), and then restrict them to the rotation subgroup \(SO(3)\).</p>
     <p>The key first step is:</p>
-    <div class="mathblock">\[
+    <div>\[
       \mathbf{4} \longrightarrow \mathbf{3} \oplus \mathbf{1}
     \]</div>
     <p>Interpretation:</p>
@@ -45,15 +45,15 @@
 
     <h2>2. Build the tensor product</h2>
     <p>Now consider a rank-2 Lorentz tensor:</p>
-    <div class="mathblock">\[
+    <div>\[
       T_{\mu\nu} = A_\mu B_\nu
     \]</div>
     <p>Under restriction, this becomes:</p>
-    <div class="mathblock">\[
+    <div>\[
       4 \otimes 4 \longrightarrow (3+1)\otimes(3+1)
     \]</div>
     <p>Expanding gives:</p>
-    <div class="mathblock">\[
+    <div>\[
       (3+1)\otimes(3+1)=3\otimes3\oplus3\otimes1\oplus1\otimes3\oplus1\otimes1
     \]</div>
 
@@ -61,7 +61,7 @@
 
     <h3>(a) The spatial tensor \(3\otimes 3\)</h3>
     <p>This is the place where symmetry and antisymmetry matter:</p>
-    <div class="mathblock">\[
+    <div>\[
       3\otimes 3 = 5\oplus3\oplus1
     \]</div>
     <p>This corresponds to decomposing \(T_{ij}\) into:</p>
@@ -70,22 +70,22 @@
     <p>- and the trace, which gives \(1\).</p>
 
     <h3>(b) The mixed components</h3>
-    <div class="mathblock">\[
+    <div>\[
       3\otimes1 = 3 \qquad (T_{i0})
     \]</div>
-    <div class="mathblock">\[
+    <div>\[
       1\otimes3 = 3 \qquad (T_{0i})
     \]</div>
     <p>These are just vectors.</p>
 
     <h3>(c) The scalar part</h3>
-    <div class="mathblock">\[
+    <div>\[
       1\otimes1 = 1 \qquad (T_{00})
     \]</div>
 
     <h2>4. Full decomposition</h2>
     <p>Putting everything together:</p>
-    <div class="mathblock">\[
+    <div>\[
       4\otimes4 \longrightarrow 5\oplus3\oplus1\oplus3\oplus3\oplus1
     \]</div>
 
@@ -134,7 +134,7 @@
 
     <h2>6. Connect this to the Lorentz decomposition</h2>
     <p>We also know that as a Lorentz representation,</p>
-    <div class="mathblock">\[
+    <div>\[
       4\otimes4 = 6\oplus10
     \]</div>
     <p>where:</p>
@@ -148,15 +148,15 @@
     <p>- \(T_{0i}\): 3 components, transforming as a vector,</p>
     <p>- \(T_{ij}\): antisymmetric in 3 dimensions, also 3 components.</p>
     <p>A key fact in three dimensions is:</p>
-    <div class="mathblock">\[
+    <div>\[
       T_{ij} \longleftrightarrow \epsilon_{ijk} B_k
     \]</div>
     <p>So an antisymmetric spatial 2-tensor is equivalent to a vector. Therefore:</p>
-    <div class="mathblock">\[
+    <div>\[
       \mathbf{6} \longrightarrow \mathbf{3}\oplus\mathbf{3}
     \]</div>
 
-    <div class="note">
+    <div>
       <strong>Important clarification.</strong> Both \(3\)'s come from the same antisymmetric Lorentz tensor. The split is because when we restrict to rotations, the antisymmetric tensor breaks into time-space components and space-space components, and each of those transforms as a \(3\).
     </div>
 
@@ -166,12 +166,12 @@
     <p>- \(T_{0i}=T_{i0}\), giving \(3\),</p>
     <p>- symmetric spatial \(T_{ij}\), giving \(5\oplus1\).</p>
     <p>Hence:</p>
-    <div class="mathblock">\[
+    <div>\[
       \mathbf{10} \longrightarrow \mathbf{5}\oplus\mathbf{3}\oplus\mathbf{1}\oplus\mathbf{1}
     \]</div>
 
     <h2>8. Final structure</h2>
-    <div class="mathblock">\[
+    <div>\[
       (6\oplus10) \longrightarrow (3\oplus3)\oplus(5\oplus3\oplus1\oplus1)
     \]</div>
 
@@ -192,31 +192,31 @@
 
     <h3>(4) Physical interpretation</h3>
     <p>For the electromagnetic tensor \(F_{\mu\nu}\), we have:</p>
-    <div class="mathblock">\[
+    <div>\[
       F_{0i} \sim E_i
     \]</div>
-    <div class="mathblock">\[
+    <div>\[
       F_{ij} \sim \epsilon_{ijk} B_k
     \]</div>
     <p>So:</p>
-    <div class="mathblock">\[
+    <div>\[
       6 \rightarrow 3\oplus3
     \]</div>
     <p>corresponding to the electric and magnetic fields.</p>
 
     <h3>(5) The big picture</h3>
     <p>Restricting from the Lorentz group to the rotation subgroup separates time from space and reorganizes everything into familiar spin representations:</p>
-    <div class="mathblock">\[
+    <div>\[
       \text{spin }0 \rightarrow 1, \qquad \text{spin }1 \rightarrow 3, \qquad \text{spin }2 \rightarrow 5
     \]</div>
 
     <h2>10. Final intuition</h2>
     <p>A good way to think about the whole process is:</p>
-    <div class="note">
+    <div>
       Take a relativistic object and ask what it looks like to someone who is only allowed to rotate space. Then the Lorentz representations naturally reorganize into \(SO(3)\) spin multiplets.
     </div>
     <p>That viewpoint leads directly to:</p>
-    <div class="mathblock">\[
+    <div>\[
       4\rightarrow3+1, \qquad 4\otimes4 \rightarrow 5+3+1+1+3+3
     \]</div>
   </main>
